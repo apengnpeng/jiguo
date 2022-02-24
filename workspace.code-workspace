@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\git_demo"
+		},
+		{
+			"path": "F:\\EditPlus"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "git_demo"
+	}
+}

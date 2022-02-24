@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/00.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
     <!-- 头部盒子 -->
     <header class="heard w">
@@ -29,108 +32,276 @@
             <button class="btn1">注册</button>
             <button class="btn2">登录</button>
         </div>
-        
+
     </header>
 
     <!-- 顶部大图片 -->
-        <div class="picture w">
-            <!-- 右侧文字 -->
-            <div class="move">
-                <p class="p1">幻响小贝HiFi2.1音箱</p>
-                <p class="p2">
-                    <span>126人申请</span>
-                    <span>￥599</span>
-                    <span>126人申请</span>
-                </p>
+    <div class="picture w">
+        <!-- 右侧文字 -->
+        <div class="move">
+            <p class="p1">幻响小贝HiFi2.1音箱</p>
+            <p class="p2">
+                <span>126人申请</span>
+                <span>￥599</span>
+                <span>126人申请</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- 报告精选 -->
+    <div class="mid">
+        <h2>报告精选</h2>
+        <span>查看更多</span>
+        <img src="./img/css-img/readMore.png" alt="">
+        <div class="pic"></div>
+    </div>
+    <!-- 准备模板 -->
+    <script id="fir" type="text/html">
+    {{each value}}
+    <div class="box">
+       <img src="{{$value.img}}" alt=""> 
+        <p>{{$value.text}}</p>
+        <div class="nam">{{$value.uName}}</div>
+        <div class="zan">
+            <img src="./img/css-img/zan.png" alt="">
+            <span>3</span>
+            <img src="./img/css-img/reply.png" alt="">
+            <span>3</span>
+        </div>
+    </div>
+    {{/each}}
+
+</script>
+    <!-- Ajax -->
+    <script src="./js/template-web.js"></script>
+    <script>
+        function oajax(url,render){
+        var oajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP')
+        oajax.open('get', url, true)
+        oajax.send()
+        oajax.onreadystatechange = function () {
+            if (oajax.readyState == 4) {
+                if (oajax.status == 200) {
+                    var res = JSON.parse(oajax.responseText)
+                    render(res)
+                    // console.log(res);
+                }
+            }
+        }
+    }
+    oajax('http://192.168.31.110:3000/report/new',render)
+        function render(res) {
+            var rep = template('fir', {
+                value: res
+            })
+            //渲染到页面
+            document.getElementsByClassName('pic')[0].innerHTML = rep
+        }
+    </script>
+
+    <!-- 导购精选 -->
+    <div class="mid_2">
+        <h2>导购精选</h2>
+        <span>查看更多</span>
+        <img src="./img/css-img/readMore.png" alt="">
+        <div class="pic_2"></div>
+        
+    </div>
+    <!-- 准备导购模板 -->
+    <script id="sec" type="text/html">
+        {{each value}}
+        <div class="box">
+           <img src="{{$value.img}}" alt=""> 
+            <p>{{$value.text}}</p>
+            
+            <div class="zan">
+                <img src="./img/css-img/xin.png" alt="">
+                <span>3</span>
+                <img src="./img/css-img/reply.png" alt="">
+                <span>3</span>
             </div>
         </div>
-   
+        {{/each}}
+    </script>
+    <script>
+        oajax('http://192.168.31.110:3000/report/new',render_2)
+        function render_2(res) {
+            var rep_2 = template('sec', {
+                value: res
+            })
+            //渲染到页面
+            document.getElementsByClassName('pic_2')[0].innerHTML = rep_2
+        }
+    </script>
+    <!-- 发现酷玩 -->
+    <div class="mid_3">
+        <h2>发现酷玩</h2>
+        <span>查看更多</span>
+        <img src="./img/css-img/readMore.png" alt="">
+        <div class="pic_3"></div>
+        
+    </div>
+
+<!-- 准备酷玩模板 -->
+    <script id="tir" type="text/html">
+        {{each value}}
+        <div class="box">
+           <img src="{{$value.img}}" alt=""> 
+            <p>{{$value.text}}</p>
+            <span>{{$value.price}}</span> 
+            <div class="zan">
+                <img src="./img/css-img/xin.png" alt="">
+                <span>3</span>
+                <img src="./img/css-img/reply.png" alt="">
+                <span>3</span>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <!-- <script>
+        oajax('http://192.168.31.110:3000/report/new',render_3)
+        function render_3(res) {
+            var rep_3 = template('tir', {
+                value: res
+                
+            })
+            console.log(res);
+            //渲染到页面
+            document.getElementsByClassName('pic_3')[0].innerHTML = rep_3
+        }
+    </script> -->
+
+    <script>
+        
+        var oajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP')
+        oajax.open('get','http://192.168.31.110:3000/report/hot', true)
+        oajax.send()
+        oajax.onreadystatechange = function () {
+            if (oajax.readyState == 4) {
+                if (oajax.status == 200) {
+                    var res = JSON.parse(oajax.responseText)
+                    render(res)
+                    // console.log(res);
+                }
+            }
+        }
+        function render(res) {
+            var rep_3 = template('tir', {
+                value: res
+            })
+            //渲染到页面
+            document.getElementsByClassName('pic_3')[0].innerHTML = rep_3
+        }
+    </script>
+
+    <!-- 点击加载更多 -->
+    <div class="clc">
+    <div class="more"><img src="./img/css-img/more.png" alt=""> 点击加载更多</div>
+    <div class="ing"><img src="./img/css-img/loading-icon.gif" alt="">正在加载更多</div>
+</div>
+    <script>
+        var more = document.getElementsByClassName('more')[0]
+        var ing = document.getElementsByClassName('ing')[0]
+        var mid_3 = document.getElementsByClassName('mid_3')[0]
+        ing.style.display = 'none'
+        more.onclick = function(){
+            more.style.display = 'none'
+            ing.style.display = 'block'
+            setTimeout(function() {
+                ing.style.display = 'none'
+                mid_3.style.height = 1300+'px'
+                
+                
+            }, 3000);
+        }
+    </script>
 
 
 
-<!-- 底部 -->
+    <!-- 底部 -->
     <footer class="footer">
         <!-- 版心 -->
         <div class="w">
-        <!-- 左侧二维码 -->
-        <div class="lef"><img src="img/image/code.png" alt=""></div>
-        <!-- 左侧极果 -->
-        <div class="lef2"><img src="img/image/logoImg.jpg" alt="">
-           <div class="xhz">全球酷玩试用导购平台酷·新奇·好玩·品质</div> 
-           <div class="xhz">微信添加“JguoJguo”获取我们的服务</div>
-        </div>
-        <!-- 左侧免费试用 -->
-        <div class="lef3">
-            <div class="xhz1">免费试用</div> 
-           <div class="xhz2"><a href="">试用流程</a> 
-               <br>
-               <a href="">如何提高成功率</a>
+            <!-- 左侧二维码 -->
+            <div class="lef"><img src="img/image/code.png" alt=""></div>
+            <!-- 左侧极果 -->
+            <div class="lef2"><img src="img/image/logoImg.jpg" alt="">
+                <div class="xhz">全球酷玩试用导购平台酷·新奇·好玩·品质</div>
+                <div class="xhz">微信添加“JguoJguo”获取我们的服务</div>
             </div>
-        </div>
-        <!-- 左侧友情链接 -->
-        <div class="lef4">
-            <div class="xhz1">友情链接</div> 
-            <table>
-                <tr>
-                    <td>智东西</td>
-                    <td>WEIBUSI</td>
-                </tr>
-                <tr>
-                    <td>搜狐IT</td>
-                    <td>腾讯科技</td>
-                </tr>
-                <tr>
-                    <td>搜狐数码 </td>
-                    <td>凤凰科技</td>
-                </tr>
-                <tr>
-                    <td>凤凰数码</td>
-                    <td>PConline</td>
-                </tr>
-                <tr>
-                    <td>泡泡网</td>
-                    <td>WEIBUSI</td>
-                </tr>
-                <tr>
-                    <td>ZUK社区</td>
-                    <td> 亿觅emie</td>
-                </tr>
-                <tr>
-                    <td>极客公园</td>
-                    <td>易迅易启玩</td>
-                </tr>
-                <tr>
-                    <td>果库</td>
-                </tr>
-                
-            </table>
-        </div>
-        <!-- 左侧购买攻略 -->
-        <div class="lef5">
-            <div class="xhz1">购买攻略</div> 
-            <ul>
-              <li>美亚海淘教程</li>
-              <li>日亚海淘教程</li>
-              <li>海淘转运攻略</li>
-              <li>kickstarter 众筹购买攻略</li>
-              <li>indiegogo 众筹购买攻略</li>
-            </ul>
-        </div>
-        <!-- 左侧厂商合作 -->
-        <div class="lef6">
-            <div class="xhz1">厂商合作</div> 
-            <ul>
-                <li>关于极果</li>
-                <li>联系我们</li>
-                <li>商务合作：BD@jiguo.com</li>
-                <li>CEO邮箱：CEO@jiguo.com</li>
-            </ul>
-        </div>
-       
+            <!-- 左侧免费试用 -->
+            <div class="lef3">
+                <div class="xhz1">免费试用</div>
+                <div class="xhz2"><a href="">试用流程</a>
+                    <br>
+                    <a href="">如何提高成功率</a>
+                </div>
+            </div>
+            <!-- 左侧友情链接 -->
+            <div class="lef4">
+                <div class="xhz1">友情链接</div>
+                <table>
+                    <tr>
+                        <td>智东西</td>
+                        <td>WEIBUSI</td>
+                    </tr>
+                    <tr>
+                        <td>搜狐IT</td>
+                        <td>腾讯科技</td>
+                    </tr>
+                    <tr>
+                        <td>搜狐数码 </td>
+                        <td>凤凰科技</td>
+                    </tr>
+                    <tr>
+                        <td>凤凰数码</td>
+                        <td>PConline</td>
+                    </tr>
+                    <tr>
+                        <td>泡泡网</td>
+                        <td>WEIBUSI</td>
+                    </tr>
+                    <tr>
+                        <td>ZUK社区</td>
+                        <td> 亿觅emie</td>
+                    </tr>
+                    <tr>
+                        <td>极客公园</td>
+                        <td>易迅易启玩</td>
+                    </tr>
+                    <tr>
+                        <td>果库</td>
+                    </tr>
+
+                </table>
+            </div>
+            <!-- 左侧购买攻略 -->
+            <div class="lef5">
+                <div class="xhz1">购买攻略</div>
+                <ul>
+                    <li>美亚海淘教程</li>
+                    <li>日亚海淘教程</li>
+                    <li>海淘转运攻略</li>
+                    <li>kickstarter 众筹购买攻略</li>
+                    <li>indiegogo 众筹购买攻略</li>
+                </ul>
+            </div>
+            <!-- 左侧厂商合作 -->
+            <div class="lef6">
+                <div class="xhz1">厂商合作</div>
+                <ul>
+                    <li>关于极果</li>
+                    <li>联系我们</li>
+                    <li>商务合作：BD@jiguo.com</li>
+                    <li>CEO邮箱：CEO@jiguo.com</li>
+                </ul>
+            </div>
+
         </div>
         <div class="last1">
-            <p>? 2016 极果版权所有</p>
+            <p>©2016 极果版权所有</p>
         </div>
     </footer>
 </body>
+
 </html>

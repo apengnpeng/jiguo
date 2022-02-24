@@ -1,0 +1,26 @@
+.mid{
+    width: 1000px;
+    margin: v0px auto;
+    height: 430px;
+    overflow: hidden;
+    background-color: #F7F7F7;
+}
+.box{
+    float: left;
+    width: 200px;
+    margin: 25px 10px;
+    border-radius: 10px;
+    height: 150px;
+    border:1px solid #ccc
+
+    img{
+        width: 200px;
+    }
+    p{
+        font-size: 14px;
+    }
+    span{
+        color: gray;
+        font-size: 12px;
+    }
+}
