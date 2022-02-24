@@ -1,3 +1,134 @@
+/* 顶部大图片 */
+.picture{
+    height: 300px;
+    background-image: url(../img/css-img/original.jpg);
+    background-position: -400px;
+    .move{
+        text-align: right;
+        color: white;
+        padding-top: 20px;
+        padding-right: 50px;
+        float: right;
+        width: 400px;
+        height: 200px;
+        animation: mov 1s;
+        @keyframes mov {
+            0%{
+                transform: translate(100px,-100px);
+            }
+        }
+        .p1{
+            font-size: 35px;
+        }
+        .p2{
+            span{
+                display: inline-block;
+                background-color: #d8d1d160;
+                margin-left: 20px;
+                margin-top: 20px;
+            }
+        }
+        .p3{
+            margin-top: 20px;
+        }
+        .btn11{
+            margin-top: 10px;
+            width: 200px;
+            height: 40px;
+            background-color: red;
+            color: white;
+            outline: none;
+            border: 0px;
+        }
+    }
+}
+.rm{
+    margin: 10px;
+}
+/* 轮播图*/
+.lbt{
+    width: 1000px;
+    margin: 0 auto;
+    height: 220px;
+    overflow: hidden;
+    // overflow: scroll;
+    font-size: 13px;
+    .ck{
+        width: 3400px;
+        height: 220px;
+            div{
+                float: left;
+                width: 200px;
+                height: 220px;
+                margin: 0px 25px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+                .po{
+                    // position: absolute;
+                    // top: 0px;
+                    // right: 0px;
+                    background-color: rgb(230, 65, 65);
+                    width: 60px;
+                    text-align: center;
+                    border-radius: 5px;
+                }
+                .p11{
+                    background-color: aqua;
+                }
+                img{
+                    width: 200px;
+                    animation: guang 1s;
+                }
+               
+                .p1{
+                    width: 220px;
+                    height: 40px;
+                    text-align: center;
+                    font-size: 12px;
+                }
+                span{
+                    position: absolute;
+                    border: 1px solid red;
+                    color: red;
+                    border-radius: 4px;
+                    width: 50px;
+                    text-align: center;
+                }
+                .sp1{
+                    left: 50px;
+                }
+                .sp2{
+                    left: 110px;
+                }
+                .p2{
+                    .ps1{
+                        position: absolute;
+                        top: 185px;
+                        left: 55px;
+                        color: red;
+                    border: 0px;
+                    }
+                   .ps{
+                       position: absolute;
+                    color: black;
+                    border: 0px;
+                    top: 185px;
+                    left: 85px;                    }
+                }
+                .pp3{
+                    position: absolute;
+                    bottom: 2px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    color: red;
+                }
+        }
+    }
+}
+
+
 .mid{
     width: 1000px;
     margin: v0px auto;
