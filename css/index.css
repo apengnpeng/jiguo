@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* 顶部大图片 */
 .picture {
   height: 300px;
@@ -15,20 +16,20 @@
   width: 400px;
   height: 200px;
   -webkit-animation: mov 1s;
-          animation: mov 1s;
+  animation: mov 1s;
 }
 
 @-webkit-keyframes mov {
   0% {
     -webkit-transform: translate(100px, -100px);
-            transform: translate(100px, -100px);
+    transform: translate(100px, -100px);
   }
 }
 
 @keyframes mov {
   0% {
     -webkit-transform: translate(100px, -100px);
-            transform: translate(100px, -100px);
+    transform: translate(100px, -100px);
   }
 }
 
@@ -82,6 +83,46 @@
   margin: 0px 25px;
   border: 1px solid #ccc;
   border-radius: 10px;
+}
+
+.mid {
+  width: 1000px;
+  margin: 20px auto;
+  height: 530px;
+  overflow: hidden;
+  background-color: #F7F7F7;
+  position: relative;
+}
+
+h2 {
+  margin-left: 23px;
+}
+
+.mid>span,
+.mid_2>span,
+.mid_3>span {
+  position: absolute;
+  color: red;
+  right: 65px;
+  top: 16px;
+  font-size: 13px;
+}
+
+.mid>img,
+.mid_2>img,
+.mid_3>img {
+  position: absolute;
+  right: 45px;
+  top: 20px;
+}
+
+.box {
+  float: left;
+  width: 200px;
+  margin: 15px 25px;
+  border-radius: 10px;
+  height: 220px;
+  border: 1px solid #ccc;
   position: relative;
   overflow: hidden;
 }
@@ -103,7 +144,7 @@
 .lbt .ck div img {
   width: 200px;
   -webkit-animation: guang 1s;
-          animation: guang 1s;
+  animation: guang 1s;
 }
 
 .lbt .ck div .p1 {
@@ -151,6 +192,85 @@
   bottom: 2px;
   left: 50%;
   -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  transform: translate(-50%);
   color: red;
+}
+
+.box>img {
+  width: 200px;
+}
+
+.box p {
+  font-size: 13px;
+  padding: 5px 8px;
+}
+
+.box>.nam {
+  color: gray;
+  font-size: 11px;
+  position: absolute;
+  top: 185px;
+  left: 10px;
+}
+
+.zan {
+  position: absolute;
+  top: 180px;
+  right: 20px;
+
+}
+
+.zan>img {
+  width: 10px;
+  height: 10px;
+}
+
+.zan>span {
+  color: gray;
+  font-size: 12px;
+}
+
+.mid_2 {
+  width: 1000px;
+  height: 270px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.mid_3 {
+  width: 1000px;
+  height: 1040px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+
+}
+
+.box>img:hover {
+  animation: opc 1s infinite;
+}
+
+@keyframes opc {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.ing img {
+  vertical-align: middle;
+}
+
+.clc {
+  width: 150px;
+  margin: 0 auto;
 }
