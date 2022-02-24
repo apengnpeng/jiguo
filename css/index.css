@@ -59,7 +59,8 @@
 }
 
 .rm {
-  margin: 10px;
+  margin: 20px;
+ transform: translateX(110px);
 }
 
 /* 轮播图*/
@@ -83,6 +84,8 @@
   margin: 0px 25px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 .mid {
@@ -148,7 +151,7 @@ h2 {
 }
 
 .lbt .ck div .p1 {
-  width: 220px;
+  width: 200px;
   height: 40px;
   text-align: center;
   font-size: 12px;
@@ -204,7 +207,13 @@ h2 {
   font-size: 13px;
   padding: 5px 8px;
 }
-
+.box>span{
+  position: absolute;
+  color: red;
+  font-size: 16px;
+  bottom: 15px;
+  left: 10px;
+}
 .box>.nam {
   color: gray;
   font-size: 11px;
@@ -273,4 +282,5 @@ h2 {
 .clc {
   width: 150px;
   margin: 0 auto;
+  cursor: pointer;
 }

@@ -51,9 +51,52 @@
                 <span>￥599</span>
                 <span>126人申请</span>
             </p>
+            <p id="p33"></p>
+            <button class="btn11">立即申请</button>
         </div>
     </div>
 
+           <!-- 轮播图 -->
+           <div class="w">
+            <h2 class="rm">热门试用</h2>
+        <div class="lbt">
+            <!-- 显示窗口 -->
+            <div class="ck">
+            </div>
+        </div>
+
+        <!-- 引入模板js -->
+        <script src="js/template-web.js"></script>  
+        <!-- 创建模板     -->
+        <script id="first" type="text/html">
+            {{each value}}
+            <div class="div">
+            <img src="{{$value.img}}" alt="">
+
+            <p class="po">{{$value.info_ty}}</p>
+
+            <p class="p1">{{$value.text}}</p>
+            <span class="sp1">{{$value.totalnum}}</span>
+            <span class="sp2">{{$value.num}}</span>
+            <p class="p2"><span class="ps1">{{$value.apply}}</span><span class="ps">申请</span>
+            </p>
+            <p class="pp3">剩余时间2天</p>
+            
+            </div>
+            {{/each}}
+        </script>
+
+        <script>
+            oajax('http://192.168.31.110:3000/report/new',move);
+            function move(res){  
+                console.log(res);
+                var html = template('first',{ 
+                value:res    
+                });
+            document.getElementsByClassName('ck')[0].innerHTML= html;
+        } 
+        </script>
+        </div>
     <!-- 报告精选 -->
     <div class="mid">
         <h2>报告精选</h2>
@@ -154,7 +197,7 @@
         <div class="box">
            <img src="{{$value.img}}" alt=""> 
             <p>{{$value.text}}</p>
-            <span>{{$value.price}}</span> 
+            <span>￥xx.xx</span> 
             <div class="zan">
                 <img src="./img/css-img/xin.png" alt="">
                 <span>3</span>
@@ -222,43 +265,7 @@
         }
     </script>
 
-        <!-- 轮播图 -->
-        <div class="w">
-            <h2 class="rm">热门试用</h2>
-        <div class="lbt">
-            <!-- 显示窗口 -->
-            <div class="ck">
-            </div>
-        </div>
-        <!-- 引入模板js -->
-        <script src="js/template-web.js"></script>  
-        <!-- 创建模板     -->
-        <script id="first" type="text/html">
-            {{each value}}
-            <div>
-            <img src="{{$value.img}}" alt="">
-            <p class="po">{{$value.info_ty}}</p>
-            <p class="p1">{{$value.text}}</p>
-            <span class="sp1">{{$value.totalnum}}</span>
-            <span class="sp2">{{$value.num}}</span>
-            <p class="p2"><span class="ps1">{{$value.apply}}</span><span class="ps">申请</span>
-            </p>
-            <p class="pp3">剩余时间2天</p>
-            
-            </div>
-            {{/each}}
-        </script>
-        <script>
-            oajax('http://192.168.31.110:3000/report/new',move);
-            function move(res){  
-                console.log(res);
-                var html = template('first',{ 
-                value:res    
-                });
-            document.getElementsByClassName('ck')[0].innerHTML= html;
-        } 
-        </script>
-        </div>
+ 
 
     <!-- 加载 -->
 
