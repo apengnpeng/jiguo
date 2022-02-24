@@ -219,9 +219,12 @@ h2 {
   font-size: 11px;
   position: absolute;
   top: 185px;
-  left: 10px;
+  left: 20px;
 }
-
+/* .nam>span{
+  font-size: 35px;
+ 
+} */
 .zan {
   position: absolute;
   top: 180px;
@@ -284,5 +287,6 @@ h2 {
   width: 150px;
   margin: 0 auto;
   cursor: pointer;
+  color: orangered;
 }
 
