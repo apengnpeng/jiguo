@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/* 头部 */
+.heard {
+  margin-top: 40px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #c5c2c2;
+  overflow: hidden;
+  /* logo */
+  /* 导航栏 */
+  /* 搜索和登录 */
+}
+
+.heard .left {
+  float: left;
+  margin-left: 50px;
+  width: 200px;
+  height: 50px;
+}
+
+.heard .left img {
+  vertical-align: middle;
+}
+
+.heard .nav {
+  float: left;
+  width: 400px;
+}
+
+.heard .nav ul li {
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.heard .nav ul li:hover {
+  color: red;
+}
+
+.heard .right {
+  float: right;
+  width: 200px;
+  height: 50px;
+}
+
+.heard .right img {
+  vertical-align: middle;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.heard .right img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.heard .right button {
+  width: 60px;
+  height: 35px;
+  border: 1px solid red;
+  background-color: #fff;
+  color: red;
+  border-radius: 5px;
+}
+
+.heard .right button:hover {
+  background-color: aqua;
+}
+
+/* 顶部大图片 */
+.picture {
+  height: 300px;
+  background-image: url(../img/css-img/original.jpg);
+  background-position: -400px;
+}
+
+/* 底部 */
+.footer {
+  margin-top: 100px;
+  width: 100%;
+  background-color: #505050;
+  height: 400px;
+  padding-top: 40px;
+  color: #a3a3a3;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.footer .w {
+  overflow: hidden;
+  height: 300px;
+}
+
+.footer .lef {
+  float: left;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.footer .lef2 {
+  float: left;
+  margin-left: 10px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.footer .lef2 .xhz {
+  margin-top: 20px;
+  color: #a3a3a3;
+}
+
+.footer .lef3 {
+  float: left;
+  width: 100px;
+  margin-left: 30px;
+}
+
+.footer .lef3 .xhz1 {
+  font-size: 20px;
+  color: white;
+}
+
+.footer .lef3 .xhz2 {
+  margin-top: 30px;
+}
+
+.footer .lef3 .xhz2 a {
+  color: #a3a3a3;
+}
+
+.footer .lef3 .xhz2 a:hover {
+  color: red;
+}
+
+.footer .lef4 {
+  float: left;
+  margin-left: 20px;
+}
+
+.footer .lef4 .xhz1 {
+  font-size: 20px;
+  color: white;
+}
+
+.footer .lef4 table {
+  margin-top: 20px;
+  width: 150px;
+}
+
+.footer .lef4 table td:hover {
+  color: red;
+}
+
+.footer .lef5 {
+  float: left;
+  margin-left: 20px;
+}
+
+.footer .lef5 .xhz1 {
+  font-size: 20px;
+  color: white;
+}
+
+.footer .lef5 ul {
+  margin-top: 20px;
+}
+
+.footer .lef5 ul li {
+  margin-top: 5px;
+}
+
+.footer .lef5 ul li:hover {
+  color: red;
+}
+
+.footer .lef6 {
+  float: left;
+  overflow: hidden;
+  width: 200px;
+  margin-left: 30px;
+}
+
+.footer .lef6 .xhz1 {
+  font-size: 20px;
+  color: white;
+}
+
+.footer .lef6 ul {
+  margin-top: 20px;
+}
+
+.footer .lef6 ul li {
+  margin-top: 5px;
+}
+
+.footer .lef6 ul li:hover {
+  color: red;
+}
+
+.footer .last1 {
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+}

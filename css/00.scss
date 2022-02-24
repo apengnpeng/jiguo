@@ -1,0 +1,185 @@
+
+/* 头部 */
+.heard{
+    margin-top: 40px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid rgb(197, 194, 194);
+    overflow: hidden;
+    /* logo */
+    .left{
+        float: left;
+        margin-left: 50px;
+        width: 200px;
+        height: 50px;
+        img{
+            vertical-align: middle;
+        }
+    }
+    /* 导航栏 */
+     .nav{
+         float: left;
+         width: 400px;
+         ul{
+            //  width: 100%;
+             li{
+                 float: left;
+                 width: 50px;
+                 height: 50px;
+                 line-height: 50px;
+                 text-align: center;
+                 margin-left: 20px;
+                 &:hover{
+                     color: red;
+                 }
+             }
+         }
+     }
+     /* 搜索和登录 */
+     .right{
+         float: right;
+         width: 200px;
+         height: 50px;
+         img{
+             vertical-align: middle;
+             transition: all .5s;
+             &:hover{
+                 transform: scale(1.5);
+             }
+         }
+         button{
+             width: 60px;
+             height: 35px;
+             border: 1px solid red;
+             background-color:#fff;
+             color: red;
+             border-radius: 5px;
+             &:hover{
+                 background-color: aqua;
+             }
+         }
+     }
+}
+
+/* 顶部大图片 */
+.picture{
+    height: 300px;
+    background-image: url(../img/css-img/original.jpg);
+    background-position: -400px;
+}
+
+
+
+
+
+/* 底部 */
+.footer{
+    margin-top: 100px;
+    width: 100%;
+    background-color: #505050;
+    height: 400px;
+    padding-top: 40px;
+    color: #a3a3a3;
+    font-size: 14px;
+    overflow: hidden;
+    .w{
+        overflow: hidden;
+        height: 300px;
+    }
+    .lef{
+        float: left;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+    }
+    .lef2{
+        float: left;
+        margin-left: 10px;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        .xhz{
+            margin-top: 20px;
+            color: #a3a3a3;
+        }
+    }
+    .lef3{
+        float: left;
+        width: 100px;
+        margin-left: 30px;
+        .xhz1{
+            font-size: 20px;
+            color: white;
+        }
+        .xhz2{
+            margin-top: 30px;
+            a{
+                color: #a3a3a3;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+    .lef4{
+        float: left;
+        // width: 200px;
+        margin-left: 20px;
+        .xhz1{
+            font-size: 20px;
+            color: white;
+        }
+        table{
+            margin-top: 20px;
+            width: 150px;
+            td{
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+    .lef5{
+        float: left;
+        // width: 200px;
+        margin-left: 20px;
+        .xhz1{
+            font-size: 20px;
+            color: white;
+        }
+        ul{
+            margin-top: 20px;
+            li{
+                margin-top: 5px;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+    .lef6{
+        float: left;
+        overflow: hidden;
+        width: 200px;
+        margin-left: 30px;
+        .xhz1{
+            font-size: 20px;
+            color: white;
+        }
+        ul{
+            margin-top: 20px;
+            li{
+                margin-top: 5px;
+                &:hover{
+                    color: red;
+                }
+            }
+        }
+    }
+    .last1{
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 auto;
+    }
+}
