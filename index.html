@@ -5,8 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/base.css">
+    <!-- //基础css -->
+    <link rel="stylesheet" href="css/base.css"> 
+    <!-- 头部和尾部css   -->
     <link rel="stylesheet" href="css/00.css">
+    <!-- 首页css -->
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+
 </head>
 <body>
     <!-- 头部盒子 -->
@@ -32,6 +38,7 @@
         
     </header>
 
+
     <!-- 顶部大图片 -->
         <div class="picture w">
             <!-- 右侧文字 -->
@@ -40,14 +47,59 @@
                 <p class="p2">
                     <span>126人申请</span>
                     <span>￥599</span>
-                    <span>126人申请</span>
+                    <span>20台</span>
                 </p>
+                <br>
+                <p id="p33">
+                    <br>
+                  
+                </p>
+                <button class="btn11">立即申请</button>
             </div>
         </div>
-   
 
 
+        <!-- 轮播图 -->
+        <div class="w">
+            <h2 class="rm">热门试用</h2>
+        <div class="lbt">
+            <!-- 显示窗口 -->
+            <div class="ck">
+            </div>
+        </div>
+        <!-- 引入模板js -->
+        <script src="js/template-web.js"></script>  
+        <!-- 创建模板     -->
+        <script id="first" type="text/html">
+            {{each value}}
+            <div>
+            <img src="{{$value.img}}" alt="">
+            <p class="po">{{$value.info_ty}}</p>
+            <p class="p1">{{$value.text}}</p>
+            <span class="sp1">{{$value.totalnum}}</span>
+            <span class="sp2">{{$value.num}}</span>
+            <p class="p2"><span class="ps1">{{$value.apply}}</span><span class="ps">申请</span>
+            </p>
+            <p class="pp3">剩余时间2天</p>
+            
+            </div>
+            {{/each}}
+        </script>
+        <script>
+            oajax('http://192.168.31.110:3000/report/new',move);
+            function move(res){  
+                console.log(res);
+                var html = template('first',{ 
+                value:res    
+                });
+            document.getElementsByClassName('ck')[0].innerHTML= html;
+        } 
+        </script>
+        </div>
 
+    <!-- 加载 -->
+
+    
 <!-- 底部 -->
     <footer class="footer">
         <!-- 版心 -->
@@ -129,7 +181,7 @@
        
         </div>
         <div class="last1">
-            <p>? 2016 极果版权所有</p>
+            <p>©2016 极果版权所有</p>
         </div>
     </footer>
 </body>
