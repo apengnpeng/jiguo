@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- //基础css -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 头部和尾部css   -->
+    <link rel="stylesheet" href="../css/00.css">
+    <!-- ajax封装 -->
+    <script src="../js/oajax.js"></script>
+    <!-- 引入play-new的css -->
+    <link rel="stylesheet" href="../css/play-new.css">
+</head>
+<body>
+    <!-- 头部盒子 -->
+    <header class="heard w">
+        <!-- 左侧logo -->
+        <div class="left"><img src="../img/image/logonew.png" alt="" width="100px"></div>
+        <!-- 中间导航 -->
+        <div class="nav">
+            <ul>
+                <li>首页</li>
+                <li>酷玩</li>
+                <li>导购</li>
+                <li>试用</li>
+                <li>报告</li>
+            </ul>
+        </div>
+        <!-- 右侧搜索和登录 -->
+        <div class="right">
+            <img src="../img/css-img/search.png" alt="">
+            <button class="btn1">注册</button>
+            <button class="btn2">登录</button>
+        </div>
+
+    </header>
+    <!-- 酷玩板块 -->
+    <div class="top">
+        <h1>发现酷玩</h1>
+        <button class="btn11">最新</button>
+        <button class="btn22">最热</button>
+        <button class="btn33">品牌</button>
+
+    <ul class="ull"></ul>
+    <ul class="ull2"></ul>
+    <ul class="ull3"></ul>         
+    </div>
+        <!-- 加载更多 -->
+        <div class="clc">
+            <div class="more"><img src="../img/css-img/more.png" alt=""> 点击加载更多</div>
+            <div class="ing"><img src="../img/css-img/loading-icon.gif" alt="">正在加载更多</div>
+            <script>
+                var more = document.getElementsByClassName('more')[0]
+                var ing = document.getElementsByClassName('ing')[0]
+                var top1 = document.getElementsByClassName('top')[0]
+                ing.style.display = 'none'
+                more.onclick = function(){
+                    more.style.display = 'none'
+                    ing.style.display = 'block'
+                    setTimeout(function() {
+                        ing.style.display = 'none'
+                        top1.style.height = 1650+'px'
+                    }, 3000);
+                }
+            </script>
+        </div>
+
+    <!-- 模板 1 酷玩最新-->
+    <script id="play" type="text/html">
+        {{each value}}
+        <li>
+            <img src="{{$value[0].img}}" alt="">
+            <p class="p1">{{$value[0].text}}</p>
+            <span class="sp1">{{$value[0].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[0].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[0].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+
+
+        {{each value}}
+        <li>
+            <img src="{{$value[1].img}}" alt="">
+            <p class="p1">{{$value[1].text}}</p>
+            <span class="sp1">{{$value[1].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[1].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[1].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+        {{each value}}
+        <li>
+            <img src="{{$value[2].img}}" alt="">
+            <p class="p1">{{$value[2].text}}</p>
+            <span class="sp1">{{$value[2].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[2].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[2].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+        {{each value}}
+        <li>
+            <img src="{{$value[3].img}}" alt="">
+            <p class="p1">{{$value[3].text}}</p>
+            <span class="sp1">{{$value[3].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[3].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[3].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+        {{each value}}
+        <li>
+            <img src="{{$value[4].img}}" alt="">
+            <p class="p1">{{$value[4].text}}</p>
+            <span class="sp1">{{$value[4].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[4].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[4].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+        {{each value}}
+        <li>
+            <img src="{{$value[2].img}}" alt="">
+            <p class="p1">{{$value[2].text}}</p>
+            <span class="sp1">{{$value[2].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[2].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[2].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 模板2 酷玩最热 -->
+    <script id="play2" type="text/html">
+        {{each value}}
+        <li>
+            <img src="{{$value[3].img}}" alt="">
+            <p class="p1">{{$value[0].text}}</p>
+            <span class="sp1">{{$value[0].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[0].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[0].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+
+
+        {{each value}}
+        <li>
+            <img src="{{$value[2].img}}" alt="">
+            <p class="p1">{{$value[1].text}}</p>
+            <span class="sp1">{{$value[1].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[1].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[1].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+        {{each value}}
+        <li>
+            <img src="{{$value[1].img}}" alt="">
+            <p class="p1">{{$value[2].text}}</p>
+            <span class="sp1">{{$value[2].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[2].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[2].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+        {{each value}}
+        <li>
+            <img src="{{$value[3].img}}" alt="">
+            <p class="p1">{{$value[3].text}}</p>
+            <span class="sp1">{{$value[3].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[3].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[3].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+        {{each value}}
+        <li>
+            <img src="{{$value[4].img}}" alt="">
+            <p class="p1">{{$value[4].text}}</p>
+            <span class="sp1">{{$value[4].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[4].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[4].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+        {{each value}}
+        <li>
+            <img src="{{$value[2].img}}" alt="">
+            <p class="p1">{{$value[2].text}}</p>
+            <span class="sp1">{{$value[2].price}}</span>
+            <div class="div">
+                <img src="../img/css-img/reply.png" alt="">
+                <span>{{$value[2].like}}</span>
+                <img src="../img/css-img/xin.png" alt="">
+                <span>{{$value[2].words}}</span>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+      <!-- 模板3 酷玩品牌 -->
+      <script id="play3" type="text/html">
+          <!-- 生活 -->
+          <div class="sh">
+          <h2>生活</h2>
+          <ul class="u3_1">
+        {{each value}}
+        <li>
+            <img src="../img/image/cat_1.png" alt="">
+            <p>
+            <span class="sp2">{{$value[0].productName}}</span>
+            <span class="sp1">({{$value[0].nums}})</span>
+         </p>
+        </li>
+        
+        {{/each}}
+        </ul>
+        <ul class="u3_2">
+        {{each value}}
+        <li>
+        <p>
+            <span class="sp2">{{$value[0].productName}}</span>
+            <span class="sp1">({{$value[0].nums}})</span>
+         </p>
+        </li>
+        <li>
+            <p>
+                <span class="sp2">{{$value[1].productName}}</span>
+                <span class="sp1">({{$value[0].nums}})</span>
+             </p>
+            </li>
+            <li>
+                <p>
+                    <span class="sp2">{{$value[3].productName}}</span>
+                    <span class="sp1">({{$value[0].nums}})</span>
+                 </p>
+                </li>
+            {{/each}}
+        </ul>
+        </div>
+        <!-- 个人护理 -->
+        <div class="hl">
+            <h2>护理</h2>
+            <ul class="u3_1">
+          {{each value}}
+          <li>
+              <img src="../img/image/cat_2.png" alt="">
+              <p>
+              <span class="sp2">{{$value[1].productName}}</span>
+              <span class="sp1">({{$value[1].nums}})</span>
+           </p>
+          </li>
+          
+          {{/each}}
+          </ul>
+          <ul class="u3_2">
+          {{each value}}
+          <li>
+          <p>
+              <span class="sp2">{{$value[0].productName}}</span>
+              <span class="sp1">({{$value[0].nums}})</span>
+           </p>
+          </li>
+          <li>
+              <p>
+                  <span class="sp2">{{$value[1].productName}}</span>
+                  <span class="sp1">({{$value[0].nums}})</span>
+               </p>
+              </li>
+              <li>
+                  <p>
+                      <span class="sp2">{{$value[3].productName}}</span>
+                      <span class="sp1">({{$value[0].nums}})</span>
+                   </p>
+                  </li>
+              {{/each}}
+          </ul>
+          </div>
+           <!-- 健康 -->
+        <div class="hl">
+            <h2>健康</h2>
+            <ul class="u3_1">
+          {{each value}}
+          <li>
+              <img src="../img/image/cat_3.png" alt="">
+              <p>
+              <span class="sp2">{{$value[3].productName}}</span>
+              <span class="sp1">({{$value[3].nums}})</span>
+           </p>
+          </li>
+          
+          {{/each}}
+          </ul>
+          <ul class="u3_2">
+          {{each value}}
+          <li>
+          <p>
+              <span class="sp2">{{$value[0].productName}}</span>
+              <span class="sp1">({{$value[0].nums}})</span>
+           </p>
+          </li>
+          <li>
+              <p>
+                  <span class="sp2">{{$value[1].productName}}</span>
+                  <span class="sp1">({{$value[0].nums}})</span>
+               </p>
+              </li>
+              <li>
+                  <p>
+                      <span class="sp2">{{$value[3].productName}}</span>
+                      <span class="sp1">({{$value[0].nums}})</span>
+                   </p>
+                  </li>
+              {{/each}}
+          </ul>
+          </div>
+
+    </script>
+
+    <!-- 引入模板js -->
+    <script src="../js/template-web.js"></script>
+    <!-- 调用ajax函数 酷玩最新 -->
+    <script>
+        oajax('http://192.168.31.110:3000/play/new','play','ull')
+    </script>
+     <!-- 调用ajax函数 酷玩最热 -->
+     <script>
+        oajax('http://192.168.31.110:3000/play/hot','play2','ull2')
+    </script>
+         <!-- 调用ajax函数 酷玩品牌 -->
+         <script>
+            oajax('http://192.168.31.110:3000/play/category','play3','ull3')
+        </script>
+        <!-- 底部 -->
+    <footer class="footer">
+            <!-- 版心 -->
+            <div class="w">
+                <!-- 左侧二维码 -->
+                <div class="lef"><img src="../img/image/code.png" alt=""></div>
+                <!-- 左侧极果 -->
+                <div class="lef2"><img src="../img/image/logoImg.jpg" alt="">
+                    <div class="xhz">全球酷玩试用导购平台酷·新奇·好玩·品质</div>
+                    <div class="xhz">微信添加“JguoJguo”获取我们的服务</div>
+                </div>
+                <!-- 左侧免费试用 -->
+                <div class="lef3">
+                    <div class="xhz1">免费试用</div>
+                    <div class="xhz2"><a href="">试用流程</a>
+                        <br>
+                        <a href="">如何提高成功率</a>
+                    </div>
+                </div>
+                <!-- 左侧友情链接 -->
+                <div class="lef4">
+                    <div class="xhz1">友情链接</div>
+                    <table>
+                        <tr>
+                            <td>智东西</td>
+                            <td>WEIBUSI</td>
+                        </tr>
+                        <tr>
+                            <td>搜狐IT</td>
+                            <td>腾讯科技</td>
+                        </tr>
+                        <tr>
+                            <td>搜狐数码 </td>
+                            <td>凤凰科技</td>
+                        </tr>
+                        <tr>
+                            <td>凤凰数码</td>
+                            <td>PConline</td>
+                        </tr>
+                        <tr>
+                            <td>泡泡网</td>
+                            <td>WEIBUSI</td>
+                        </tr>
+                        <tr>
+                            <td>ZUK社区</td>
+                            <td> 亿觅emie</td>
+                        </tr>
+                        <tr>
+                            <td>极客公园</td>
+                            <td>易迅易启玩</td>
+                        </tr>
+                        <tr>
+                            <td>果库</td>
+                        </tr>
+    
+                    </table>
+                </div>
+                <!-- 左侧购买攻略 -->
+                <div class="lef5">
+                    <div class="xhz1">购买攻略</div>
+                    <ul>
+                        <li>美亚海淘教程</li>
+                        <li>日亚海淘教程</li>
+                        <li>海淘转运攻略</li>
+                        <li>kickstarter 众筹购买攻略</li>
+                        <li>indiegogo 众筹购买攻略</li>
+                    </ul>
+                </div>
+                <!-- 左侧厂商合作 -->
+                <div class="lef6">
+                    <div class="xhz1">厂商合作</div>
+                    <ul>
+                        <li>关于极果</li>
+                        <li>联系我们</li>
+                        <li>商务合作：BD@jiguo.com</li>
+                        <li>CEO邮箱：CEO@jiguo.com</li>
+                    </ul>
+                </div>
+    
+            </div>
+            <div class="last1">
+                <p>©2016 极果版权所有</p>
+            </div>
+    </footer>
+
+
+    <!-- 按钮 -->
+    <script>
+        window.onload=function(){
+        var btn11 = document.querySelector('.btn11');
+        var btn22 = document.getElementsByClassName('btn22')[0];
+        var btn33 = document.getElementsByClassName('btn33')[0];
+        var ull = document.getElementsByClassName('ull')[0]
+        var ull2 = document.getElementsByClassName('ull2')[0]
+        var ull3 = document.getElementsByClassName('ull3')[0]
+        btn11.onclick = function(){
+            ull.style.display='block';
+            ull2.style.display='none';
+            ull3.style.display='none';
+            btn11.style.borderBottom = '2px solid red';
+            btn22.style.border=0;
+            btn33.style.border=0;
+        }
+        btn22.onclick = function(){
+            ull.style.display='none';
+            ull2.style.display='block';
+            ull3.style.display='none';
+            btn22.style.borderBottom = '2px solid red';
+            btn11.style.border=0;
+            btn33.style.border=0;
+        }
+        btn33.onclick = function(){
+            ull.style.display='none';
+            ull2.style.display='none';
+            ull3.style.display='block';
+            btn33.style.borderBottom = '2px solid red';
+            btn22.style.border=0;
+            btn11.style.border=0;
+        }
+    }
+    </script>
+</body>
+</html>

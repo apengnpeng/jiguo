@@ -1,0 +1,150 @@
+.top {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  height: 1050px;
+  background-color: #f7f7f7;
+}
+
+.top h1 {
+  margin: 15px auto;
+}
+
+.top button {
+  border: 0px;
+  font-size: 16px;
+  margin: 0px 20px;
+  width: 100px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.top .ull,
+.top .ull2 {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: none;
+}
+
+.top .ull li,
+.top .ull2 li {
+  float: left;
+  height: 220px;
+  width: 200px;
+  margin: 10px 25px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.top .ull li img,
+.top .ull2 li img {
+  width: 200px;
+}
+
+.top .ull li img:hover,
+.top .ull2 li img:hover {
+  -webkit-animation: opc 1s infinite;
+          animation: opc 1s infinite;
+}
+
+.top .ull li .p1,
+.top .ull2 li .p1 {
+  font-size: 14px;
+}
+
+.top .ull li .sp1,
+.top .ull2 li .sp1 {
+  position: absolute;
+  left: 10px;
+  color: red;
+  bottom: 20px;
+}
+
+.top .ull li .div,
+.top .ull2 li .div {
+  width: 100px;
+  position: absolute;
+  right: 5px;
+  bottom: 22px;
+}
+
+.top .ull li .div img,
+.top .ull2 li .div img {
+  width: 15px;
+  vertical-align: middle;
+}
+
+.top .ull {
+  display: block;
+}
+
+.top .ull3 {
+  width: 1000px;
+  margin: 20px auto;
+  display: none;
+}
+
+.top .ull3 .sh,
+.top .ull3 .hl {
+  border: 1px solid;
+  width: 1000px;
+  height: 550px;
+  margin-top: 30px;
+}
+
+.top .ull3 .sh h2,
+.top .ull3 .hl h2 {
+  margin: 0 auto;
+  -webkit-transform: translateX(-450px);
+          transform: translateX(-450px);
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  border-left: 5px solid red;
+}
+
+.top .ull3 .sh .u3_1,
+.top .ull3 .hl .u3_1 {
+  width: 1000px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.top .ull3 .sh .u3_1 li,
+.top .ull3 .hl .u3_1 li {
+  float: left;
+  overflow: hidden;
+  height: 150px;
+  width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.top .ull3 .sh .u3_1 li p,
+.top .ull3 .hl .u3_1 li p {
+  margin-top: 10px;
+}
+
+.top .ull3 .sh .u3_2,
+.top .ull3 .hl .u3_2 {
+  width: 1000px;
+  border-top: 1px solid;
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.top .ull3 .sh .u3_2 li,
+.top .ull3 .hl .u3_2 li {
+  float: left;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.clc {
+  width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+  color: orangered;
+}
