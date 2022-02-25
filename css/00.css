@@ -48,13 +48,11 @@
 
 .heard .right img {
   vertical-align: middle;
-  -webkit-transition: all .5s;
   transition: all .5s;
 }
 
 .heard .right img:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .heard .right button {

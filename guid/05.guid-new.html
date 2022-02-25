@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../css/base.css">
+    <link rel="stylesheet" href="./../css/guid-new.css">
+    <link rel="stylesheet" href="./../css/00.css">
+    <script src="./../js/oajax.js"></script>
+</head>
+
+<body>
+    <!-- 头部盒子 -->
+    <header class="heard w">
+        <!-- 左侧logo -->
+        <div class="left"><img src="./../img/image/logonew.png" alt="" width="100px"></div>
+        <!-- 中间导航 -->
+        <div class="nav">
+            <ul>
+                <li>首页</li>
+                <li>酷玩</li>
+                <li>导购</li>
+                <li>试用</li>
+                <li>报告</li>
+            </ul>
+        </div>
+        <!-- 右侧搜索和登录 -->
+        <div class="right">
+            <img src="./../img/css-img/search.png" alt="">
+            <button class="btn1">注册</button>
+            <button class="btn2">登录</button>
+        </div>
+
+    </header>
+
+    <!-- 导购清单 -->
+    <!-- 最新  -->
+    <div class="big">
+        <h1>导购清单</h1>
+        <div class="fir">
+            <span class="aa">最新</span>
+            <span class="bb">最热</span>
+        </div>
+        <div class="pict"></div>
+    </div>
+    <script src="./../js/template-web.js"></script>
+
+    <script id="one" type="text/html">
+        {{each value}}
+        <div class="box">
+           <img src="{{$value.img}}" alt=""> 
+            <p>{{$value.text}}</p>
+            
+            <div class="zan">
+                <img src="./../img/css-img/xin.png" alt="">
+                <span>{{$value.like}}</span>
+                <img src="./../img/css-img/reply.png" alt="">
+                <span>{{$value.words}}</span>
+            </div>
+        </div>
+        {{/each}}
+        {{each value}}
+        <div class="box">
+           <img src="{{$value.img}}" alt=""> 
+            <p>{{$value.text}}</p>
+            
+            <div class="zan">
+                <img src="./../img/css-img/xin.png" alt="">
+                <span>{{$value.like}}</span>
+                <img src="./../img/css-img/reply.png" alt="">
+                <span>{{$value.words}}</span>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script>
+        oajax('http://192.168.31.110:3000/guid/new', 'one', 'pict')
+    </script>
+
+
+    <!-- 点击加载更多 -->
+    <div class="bot">
+        <div class="clc">
+            <div class="more"><img src="./../img/css-img/more.png" alt=""> 点击加载更多</div>
+            <div class="ing"><img src="./../img/css-img/loading-icon.gif" alt="">正在加载更多</div>
+        </div>
+        <script>
+            var more = document.getElementsByClassName('more')[0]
+            var ing = document.getElementsByClassName('ing')[0]
+            var pict = document.getElementsByClassName('pict')[0]
+            ing.style.display = 'none'
+            more.onclick = function () {
+                more.style.display = 'none'
+                ing.style.display = 'block'
+                setTimeout(function () {
+                    ing.style.display = 'none'
+                    pict.style.height = 2000 + 'px'
+
+
+                }, 3000);
+            }
+        </script>
+    </div>
+
+    <!-- 最热  -->
+    <div class="big1">
+        <h1>导购清单</h1>
+        <div class="fir1">
+            <span id="aa">最新</span>
+            <span class="bb">最热</span>
+        </div>
+        <div class="pict1"></div>
+    </div>
+    <script src="./../js/template-web.js"></script>
+
+    <script id="one" type="text/html">
+            {{each value}}
+            <div class="box">
+               <img src="{{$value.img}}" alt=""> 
+                <p>{{$value.text}}</p>
+                
+                <div class="zan">
+                    <img src="./../img/css-img/xin.png" alt="">
+                    <span>{{$value.like}}</span>
+                    <img src="./../img/css-img/reply.png" alt="">
+                    <span>{{$value.words}}</span>
+                </div>
+            </div>
+            {{/each}}
+            {{each value}}
+            <div class="box">
+               <img src="{{$value.img}}" alt=""> 
+                <p>{{$value.text}}</p>
+                
+                <div class="zan">
+                    <img src="./../img/css-img/xin.png" alt="">
+                    <span>{{$value.like}}</span>
+                    <img src="./../img/css-img/reply.png" alt="">
+                    <span>{{$value.words}}</span>
+                </div>
+            </div>
+            {{/each}}
+        </script>
+    <script>
+        oajax('http://192.168.31.110:3000/guid/hot', 'one', 'pict1')
+    </script>
+
+
+    <!-- 点击加载更多 -->
+
+    <div class="bot1">
+        <div class="clc1">
+            <div class="more1"><img src="./../img/css-img/more.png" alt=""> 点击加载更多</div>
+            <div class="ing1"><img src="./../img/css-img/loading-icon.gif" alt="">正在加载更多</div>
+        </div>
+        <script>
+            var more1 = document.getElementsByClassName('more1')[0]
+            var ing1 = document.getElementsByClassName('ing1')[0]
+            var pict1 = document.getElementsByClassName('pict1')[0]
+            ing1.style.display = 'none'
+            more1.onclick = function () {
+                more1.style.display = 'none'
+                ing1.style.display = 'block'
+                setTimeout(function () {
+                    ing1.style.display = 'none'
+                    pict1.style.height = 2000 + 'px'
+                }, 3000);
+            }
+        </script>
+    </div>
+    <!-- 点击切换 -->
+    <script>
+        var fir = document.getElementsByClassName('fir')[0]
+        var fir1 = document.getElementsByClassName('fir1')[0]
+        var bb = document.getElementsByClassName('bb')[0]
+        var big = document.getElementsByClassName('big')[0]
+        var pict = document.getElementsByClassName('pict')[0]
+        var bot = document.getElementsByClassName('bot')[0]
+        var big1 = document.getElementsByClassName('big1')[0]
+        var pict1 = document.getElementsByClassName('pict1')[0]
+        var bot1 = document.getElementsByClassName('bot1')[0]
+        bb.onclick = function () {
+            fir.style.display = 'none'
+            fir1.style.display = 'block'
+            big.style.display = 'none'
+            pict.style.display = 'none'
+            bot.style.display = 'none'
+            big1.style.display = 'block'
+            pict1.style.display = 'block'
+            bot1.style.display = 'block'
+        }
+        aa.onclick = function () {
+           
+            fir1.style.display = 'none'
+            fir.style.display = 'block'
+            big1.style.display = 'none'
+            pict1.style.display = 'none'
+            bot1.style.display = 'none'
+            big.style.display = 'block'
+            pict.style.display = 'block'
+            bot.style.display = 'block'
+        }
+
+    </script>
+
+
+
+
+    <!-- 底部盒子 -->
+    <footer class="footer">
+        <!-- 版心 -->
+        <div class="w">
+            <!-- 左侧二维码 -->
+            <div class="lef"><img src="./../img/image/code.png" alt=""></div>
+            <!-- 左侧极果 -->
+            <div class="lef2"><img src="./../img/image/logoImg.jpg" alt="">
+                <div class="xhz">全球酷玩试用导购平台酷·新奇·好玩·品质</div>
+                <div class="xhz">微信添加“JguoJguo”获取我们的服务</div>
+            </div>
+            <!-- 左侧免费试用 -->
+            <div class="lef3">
+                <div class="xhz1">免费试用</div>
+                <div class="xhz2"><a href="">试用流程</a>
+                    <br>
+                    <a href="">如何提高成功率</a>
+                </div>
+            </div>
+            <!-- 左侧友情链接 -->
+            <div class="lef4">
+                <div class="xhz1">友情链接</div>
+                <table>
+                    <tr>
+                        <td>智东西</td>
+                        <td>WEIBUSI</td>
+                    </tr>
+                    <tr>
+                        <td>搜狐IT</td>
+                        <td>腾讯科技</td>
+                    </tr>
+                    <tr>
+                        <td>搜狐数码 </td>
+                        <td>凤凰科技</td>
+                    </tr>
+                    <tr>
+                        <td>凤凰数码</td>
+                        <td>PConline</td>
+                    </tr>
+                    <tr>
+                        <td>泡泡网</td>
+                        <td>WEIBUSI</td>
+                    </tr>
+                    <tr>
+                        <td>ZUK社区</td>
+                        <td> 亿觅emie</td>
+                    </tr>
+                    <tr>
+                        <td>极客公园</td>
+                        <td>易迅易启玩</td>
+                    </tr>
+                    <tr>
+                        <td>果库</td>
+                    </tr>
+
+                </table>
+            </div>
+            <!-- 左侧购买攻略 -->
+            <div class="lef5">
+                <div class="xhz1">购买攻略</div>
+                <ul>
+                    <li>美亚海淘教程</li>
+                    <li>日亚海淘教程</li>
+                    <li>海淘转运攻略</li>
+                    <li>kickstarter 众筹购买攻略</li>
+                    <li>indiegogo 众筹购买攻略</li>
+                </ul>
+            </div>
+            <!-- 左侧厂商合作 -->
+            <div class="lef6">
+                <div class="xhz1">厂商合作</div>
+                <ul>
+                    <li>关于极果</li>
+                    <li>联系我们</li>
+                    <li>商务合作：BD@jiguo.com</li>
+                    <li>CEO邮箱：CEO@jiguo.com</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="last1">
+            <p>©2016 极果版权所有</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
