@@ -1,0 +1,313 @@
+.dhz {
+  width: 1000px;
+  height: 900px;
+  margin: 20px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.dhz .sp10, .dhz .sp20 {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 10px;
+}
+
+.dhz .sp10 {
+  color: red;
+}
+
+.dhz .ul_l {
+  margin: 10px auto;
+  width: 800px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.dhz .ul_l li {
+  float: left;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.dhz .ul_l li:nth-child(1) {
+  color: #da3232;
+}
+
+.dhz .ul_l li:nth-child(2) a {
+  color: black;
+}
+
+.dhz .ul_1,
+.dhz .ul_2,
+.dhz .ul_3,
+.dhz .ul_4, .dhz .ul_5 {
+  background-color: #f7f7f7;
+  overflow: hidden;
+  display: none;
+}
+
+.dhz .ul_1 li,
+.dhz .ul_2 li,
+.dhz .ul_3 li,
+.dhz .ul_4 li, .dhz .ul_5 li {
+  float: left;
+  width: 200px;
+  height: 220px;
+  margin: 20px 25px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.dhz .ul_1 li img,
+.dhz .ul_2 li img,
+.dhz .ul_3 li img,
+.dhz .ul_4 li img, .dhz .ul_5 li img {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.dhz .ul_1 li img:hover,
+.dhz .ul_2 li img:hover,
+.dhz .ul_3 li img:hover,
+.dhz .ul_4 li img:hover, .dhz .ul_5 li img:hover {
+  -webkit-animation: opc 1s infinite;
+          animation: opc 1s infinite;
+}
+
+.dhz .ul_1 li .sf,
+.dhz .ul_1 li .sf1,
+.dhz .ul_2 li .sf,
+.dhz .ul_2 li .sf1,
+.dhz .ul_3 li .sf,
+.dhz .ul_3 li .sf1,
+.dhz .ul_4 li .sf,
+.dhz .ul_4 li .sf1, .dhz .ul_5 li .sf,
+.dhz .ul_5 li .sf1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.dhz .ul_1 li .sf0,
+.dhz .ul_2 li .sf0,
+.dhz .ul_3 li .sf0,
+.dhz .ul_4 li .sf0, .dhz .ul_5 li .sf0 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #c9ec68;
+  border-radius: 5px;
+}
+
+.dhz .ul_1 li .p1,
+.dhz .ul_2 li .p1,
+.dhz .ul_3 li .p1,
+.dhz .ul_4 li .p1, .dhz .ul_5 li .p1 {
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dhz .ul_1 li .sp1,
+.dhz .ul_1 li .sp2,
+.dhz .ul_1 li .sp0,
+.dhz .ul_1 li .sp00,
+.dhz .ul_1 li .sp22,
+.dhz .ul_1 li .sp11,
+.dhz .ul_1 li .sp111,
+.dhz .ul_1 li .sp222,
+.dhz .ul_2 li .sp1,
+.dhz .ul_2 li .sp2,
+.dhz .ul_2 li .sp0,
+.dhz .ul_2 li .sp00,
+.dhz .ul_2 li .sp22,
+.dhz .ul_2 li .sp11,
+.dhz .ul_2 li .sp111,
+.dhz .ul_2 li .sp222,
+.dhz .ul_3 li .sp1,
+.dhz .ul_3 li .sp2,
+.dhz .ul_3 li .sp0,
+.dhz .ul_3 li .sp00,
+.dhz .ul_3 li .sp22,
+.dhz .ul_3 li .sp11,
+.dhz .ul_3 li .sp111,
+.dhz .ul_3 li .sp222,
+.dhz .ul_4 li .sp1,
+.dhz .ul_4 li .sp2,
+.dhz .ul_4 li .sp0,
+.dhz .ul_4 li .sp00,
+.dhz .ul_4 li .sp22,
+.dhz .ul_4 li .sp11,
+.dhz .ul_4 li .sp111,
+.dhz .ul_4 li .sp222, .dhz .ul_5 li .sp1,
+.dhz .ul_5 li .sp2,
+.dhz .ul_5 li .sp0,
+.dhz .ul_5 li .sp00,
+.dhz .ul_5 li .sp22,
+.dhz .ul_5 li .sp11,
+.dhz .ul_5 li .sp111,
+.dhz .ul_5 li .sp222 {
+  position: absolute;
+  margin-top: 5px;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.dhz .ul_1 li .sp11,
+.dhz .ul_1 li .sp22,
+.dhz .ul_2 li .sp11,
+.dhz .ul_2 li .sp22,
+.dhz .ul_3 li .sp11,
+.dhz .ul_3 li .sp22,
+.dhz .ul_4 li .sp11,
+.dhz .ul_4 li .sp22, .dhz .ul_5 li .sp11,
+.dhz .ul_5 li .sp22 {
+  color: aqua;
+  border: 1px solid aqua;
+}
+
+.dhz .ul_1 li .sp111,
+.dhz .ul_1 li .sp222,
+.dhz .ul_2 li .sp111,
+.dhz .ul_2 li .sp222,
+.dhz .ul_3 li .sp111,
+.dhz .ul_3 li .sp222,
+.dhz .ul_4 li .sp111,
+.dhz .ul_4 li .sp222, .dhz .ul_5 li .sp111,
+.dhz .ul_5 li .sp222 {
+  color: red;
+  border: 1px solid red;
+}
+
+.dhz .ul_1 li .sp1,
+.dhz .ul_1 li .sp2,
+.dhz .ul_2 li .sp1,
+.dhz .ul_2 li .sp2,
+.dhz .ul_3 li .sp1,
+.dhz .ul_3 li .sp2,
+.dhz .ul_4 li .sp1,
+.dhz .ul_4 li .sp2, .dhz .ul_5 li .sp1,
+.dhz .ul_5 li .sp2 {
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+
+.dhz .ul_1 li .sp0,
+.dhz .ul_1 li .sp00,
+.dhz .ul_2 li .sp0,
+.dhz .ul_2 li .sp00,
+.dhz .ul_3 li .sp0,
+.dhz .ul_3 li .sp00,
+.dhz .ul_4 li .sp0,
+.dhz .ul_4 li .sp00, .dhz .ul_5 li .sp0,
+.dhz .ul_5 li .sp00 {
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.dhz .ul_1 li .sp1,
+.dhz .ul_1 li .sp0,
+.dhz .ul_1 li .sp11,
+.dhz .ul_1 li .sp111,
+.dhz .ul_2 li .sp1,
+.dhz .ul_2 li .sp0,
+.dhz .ul_2 li .sp11,
+.dhz .ul_2 li .sp111,
+.dhz .ul_3 li .sp1,
+.dhz .ul_3 li .sp0,
+.dhz .ul_3 li .sp11,
+.dhz .ul_3 li .sp111,
+.dhz .ul_4 li .sp1,
+.dhz .ul_4 li .sp0,
+.dhz .ul_4 li .sp11,
+.dhz .ul_4 li .sp111, .dhz .ul_5 li .sp1,
+.dhz .ul_5 li .sp0,
+.dhz .ul_5 li .sp11,
+.dhz .ul_5 li .sp111 {
+  left: 25px;
+}
+
+.dhz .ul_1 li .end,
+.dhz .ul_1 li .sy,
+.dhz .ul_1 li .sy1,
+.dhz .ul_2 li .end,
+.dhz .ul_2 li .sy,
+.dhz .ul_2 li .sy1,
+.dhz .ul_3 li .end,
+.dhz .ul_3 li .sy,
+.dhz .ul_3 li .sy1,
+.dhz .ul_4 li .end,
+.dhz .ul_4 li .sy,
+.dhz .ul_4 li .sy1, .dhz .ul_5 li .end,
+.dhz .ul_5 li .sy,
+.dhz .ul_5 li .sy1 {
+  position: absolute;
+  width: 200px;
+  left: 4px;
+  bottom: 5px;
+  color: #ccc;
+}
+
+.dhz .ul_1 li .sy,
+.dhz .ul_2 li .sy,
+.dhz .ul_3 li .sy,
+.dhz .ul_4 li .sy, .dhz .ul_5 li .sy {
+  color: aqua;
+  left: 0px;
+}
+
+.dhz .ul_1 li .sy1,
+.dhz .ul_2 li .sy1,
+.dhz .ul_3 li .sy1,
+.dhz .ul_4 li .sy1, .dhz .ul_5 li .sy1 {
+  color: red;
+}
+
+.dhz .ul_1 li .p2,
+.dhz .ul_2 li .p2,
+.dhz .ul_3 li .p2,
+.dhz .ul_4 li .p2, .dhz .ul_5 li .p2 {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.dhz .ul_1 li .p2 .sp3,
+.dhz .ul_2 li .p2 .sp3,
+.dhz .ul_3 li .p2 .sp3,
+.dhz .ul_4 li .p2 .sp3, .dhz .ul_5 li .p2 .sp3 {
+  color: red;
+  bottom: 10px;
+  left: 30px;
+}
+
+.dhz .ul_1 {
+  display: block;
+}
+
+.clc {
+  width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+  color: gray;
+}

@@ -22,17 +22,17 @@
         <!-- 中间导航 -->
         <div class="nav">
             <ul>
-                <li>首页</li>
-                <li>酷玩</li>
-                <li>导购</li>
-                <li>试用</li>
-                <li>报告</li>
+                <li><a href="../index.html">首页</a> </li>
+                <li><a href="../play/02.play-new.html"  style="color: red;">酷玩</a> </li>
+                <li><a href="../guid/05.guid-new.html">导购</a> </li>
+                <li><a href="../use/08.use-all.html">试用</a> </li>
+                <li><a href="../report/14.report-new.html">报告</a> </li>
             </ul>
         </div>
         <!-- 右侧搜索和登录 -->
         <div class="right">
             <img src="../img/css-img/search.png" alt="">
-            <button class="btn1">注册</button>
+            <button class="btn1"><a href="../regist.html">注册</a> </button>
             <button class="btn2">登录</button>
         </div>
 
@@ -250,7 +250,7 @@
           <ul class="u3_1">
         {{each value}}
         <li>
-            <img src="../img/image/cat_1.png" alt="">
+            <img src="{{$value[0].icon}}" alt="">
             <p>
             <span class="sp2">{{$value[0].productName}}</span>
             <span class="sp1">({{$value[0].nums}})</span>
@@ -288,7 +288,7 @@
             <ul class="u3_1">
           {{each value}}
           <li>
-              <img src="../img/image/cat_2.png" alt="">
+              <img src="{{$value[1].icon}}" alt="">
               <p>
               <span class="sp2">{{$value[1].productName}}</span>
               <span class="sp1">({{$value[1].nums}})</span>
@@ -326,7 +326,7 @@
             <ul class="u3_1">
           {{each value}}
           <li>
-              <img src="../img/image/cat_3.png" alt="">
+              <img src="{{$value[0].icon}}" alt="">
               <p>
               <span class="sp2">{{$value[3].productName}}</span>
               <span class="sp1">({{$value[3].nums}})</span>

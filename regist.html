@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/00.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/regist.css">
+</head>
+<body>
+        <!-- 头部盒子 -->
+        <header class="heard w">
+            <!-- 左侧logo -->
+            <div class="left"><img src="./../img/image/logonew.png" alt="" width="100px"></div>
+            <!-- 中间导航 -->
+            <div class="nav">
+                <ul>
+                    <li><a href="index.html">首页</a> </li>
+                    <li><a href="./play/02.play-new.html">酷玩</a> </li>
+                    <li><a href="./guid/05.guid-new.html">导购</a> </li>
+                    <li><a href="./use/08.use-all.html">试用</a> </li>
+                    <li><a href="./report/14.report-new.html">报告</a> </li>
+                </ul>
+            </div>
+            <!-- 右侧搜索和登录 -->
+            <div class="right">
+                <img src="./../img/css-img/search.png" alt="">
+                <button class="btn1"><a href="regist.html"> 注册</a></button>
+                <button class="btn2">登录</button>
+                
+            </div>
+    
+        </header>
+        <!-- 中心板块 -->
+        <div class="context">
+            <h2 class="h2">注册极果</h2>
+            <!-- 输入框板块 -->
+            <!-- 手机号 -->
+            <div class="hz">
+                <div class="box">
+                    <input type="text" name="" id="phone" placeholder="请输入登录手机号">
+                </div>
+                <!-- 图片效验码 -->
+                <div class="box box1">
+                    <input type="text" name="" id="xym" placeholder="请输入图片效验码">
+                    <img src="./img/image/imgCode.jpg" alt="">
+                </div>
+                <!-- 数字验证码 -->
+                <div class="box">
+                    <input type="text" name="" id="yzm" placeholder="请输入4位数字验证码">
+                    <span class="sp1">获取验证码</span>
+                </div>
+                <!-- 用户名 -->
+                <div class="box">
+                    <input type="text" name="" id="username" placeholder="请输入用户名">
+                </div>
+                <!-- 密码 -->
+                <div class="box">
+                    <input type="password" name="" id="pwd" placeholder="请输入新密码">
+                </div>
+                <!-- 确认密码 -->
+                <div class="box">
+                    <input type="password" name="" id="pwd2" placeholder="确认新密码">
+                </div>
+
+                <div class="box"><button class="btnn">立即注册</button></div>
+                
+            </div>
+
+            <script>
+                var btnn = document.getElementsByClassName('btnn')[0];
+                btnn.onclick = function(){
+                    // 正则----验证手机号
+                var yz1 = /^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/;  
+                    // 正则----用户名
+                    var yz2 = /^[\u4e00-\u9fa5]{2,3}$/
+                    // 正则 ----密码
+                    var yz3 = /^\w{4,10}$/;
+                if( yz1.test(phone.value)==false){
+                    alert('错误，请输入正确的手机号')
+                }
+                else if(yz2.test(username.value)==false){
+                    alert('请输入2-3个汉字')
+                }else if(yz3.test(pwd.value)==false){
+                    alert('请输入以数字、字母、下划线开头的4-10位密码')
+                }else if(pwd.value != pwd2.value){
+                    alert('两次输入密码要一致')
+                }
+            }
+            </script>
+        </div>
+
+
+
+            <!-- 底部盒子 -->
+    <footer class="footer">
+        <!-- 版心 -->
+        <div class="w">
+            <!-- 左侧二维码 -->
+            <div class="lef"><img src="./../img/image/code.png" alt=""></div>
+            <!-- 左侧极果 -->
+            <div class="lef2"><img src="./../img/image/logoImg.jpg" alt="">
+                <div class="xhz">全球酷玩试用导购平台酷·新奇·好玩·品质</div>
+                <div class="xhz">微信添加“JguoJguo”获取我们的服务</div>
+            </div>
+            <!-- 左侧免费试用 -->
+            <div class="lef3">
+                <div class="xhz1">免费试用</div>
+                <div class="xhz2"><a href="">试用流程</a>
+                    <br>
+                    <a href="">如何提高成功率</a>
+                </div>
+            </div>
+            <!-- 左侧友情链接 -->
+            <div class="lef4">
+                <div class="xhz1">友情链接</div>
+                <table>
+                    <tr>
+                        <td>智东西</td>
+                        <td>WEIBUSI</td>
+                    </tr>
+                    <tr>
+                        <td>搜狐IT</td>
+                        <td>腾讯科技</td>
+                    </tr>
+                    <tr>
+                        <td>搜狐数码 </td>
+                        <td>凤凰科技</td>
+                    </tr>
+                    <tr>
+                        <td>凤凰数码</td>
+                        <td>PConline</td>
+                    </tr>
+                    <tr>
+                        <td>泡泡网</td>
+                        <td>WEIBUSI</td>
+                    </tr>
+                    <tr>
+                        <td>ZUK社区</td>
+                        <td> 亿觅emie</td>
+                    </tr>
+                    <tr>
+                        <td>极客公园</td>
+                        <td>易迅易启玩</td>
+                    </tr>
+                    <tr>
+                        <td>果库</td>
+                    </tr>
+
+                </table>
+            </div>
+            <!-- 左侧购买攻略 -->
+            <div class="lef5">
+                <div class="xhz1">购买攻略</div>
+                <ul>
+                    <li>美亚海淘教程</li>
+                    <li>日亚海淘教程</li>
+                    <li>海淘转运攻略</li>
+                    <li>kickstarter 众筹购买攻略</li>
+                    <li>indiegogo 众筹购买攻略</li>
+                </ul>
+            </div>
+            <!-- 左侧厂商合作 -->
+            <div class="lef6">
+                <div class="xhz1">厂商合作</div>
+                <ul>
+                    <li>关于极果</li>
+                    <li>联系我们</li>
+                    <li>商务合作：BD@jiguo.com</li>
+                    <li>CEO邮箱：CEO@jiguo.com</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="last1">
+            <p>©2016 极果版权所有</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -27,6 +27,14 @@
   width: 400px;
 }
 
+.heard .nav a {
+  color: black;
+}
+
+.heard .nav a:hover {
+  color: red;
+}
+
 .heard .nav ul li {
   float: left;
   width: 50px;
@@ -48,11 +56,13 @@
 
 .heard .right img {
   vertical-align: middle;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 
 .heard .right img:hover {
-  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .heard .right button {
@@ -66,6 +76,10 @@
 
 .heard .right button:hover {
   background-color: aqua;
+}
+
+.heard .right button a {
+  color: red;
 }
 
 /* 底部 */

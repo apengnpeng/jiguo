@@ -1,0 +1,199 @@
+.dhz {
+    
+    width: 1000px;
+    height: 900px;
+    margin: 20px auto;
+    text-align: center;
+    overflow: hidden;
+
+    .sp10,.sp20
+     {
+        display: inline-block;
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        // border: 1px solid;
+        margin: 0 10px;
+    }
+
+    .sp10 {
+        color: red;
+    }
+
+    .ul_l {
+        margin: 10px auto;
+        width: 800px;
+        overflow: hidden;
+        text-align: center;
+
+        li {
+            float: left;
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+
+            &:nth-child(1) {
+                color: rgb(218, 50, 50);
+            }
+
+            &:nth-child(2) {
+                a {
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .ul_1,
+    .ul_2,
+    .ul_3,
+    .ul_4,.ul_5 {
+        background-color: #f7f7f7;
+        overflow: hidden;
+        display: none;
+
+        li {
+            float: left;
+            width: 200px;
+            height: 220px;
+            margin: 20px 25px;
+            position: relative;
+            border-radius: 5px;
+
+            img {
+                width: 200px;
+                height: 100px;
+                overflow: hidden;
+
+                &:hover {
+                    animation: opc 1s infinite;
+                }
+            }
+
+            .sf,
+            .sf1 {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 80px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background-color: red;
+                border-radius: 5px;
+            }
+            .sf0{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 80px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background-color: rgb(201, 236, 104);
+                border-radius: 5px;
+            }
+
+            .p1 {
+                font-size: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .sp1,
+            .sp2,
+            .sp0,
+            .sp00,
+            .sp22,
+            .sp11,
+            .sp111,
+            .sp222 {
+                position: absolute;
+                margin-top: 5px;
+                width: 60px;
+                height: 30px;
+                line-height: 30px;
+                border: 1px solid;
+                border-radius: 5px;
+            }
+
+            .sp11,
+            .sp22 {
+                color: aqua;
+                border: 1px solid aqua;
+            }
+
+            .sp111,
+            .sp222 {
+                color: red;
+                border: 1px solid red;
+            }
+
+            .sp1,
+            .sp2 {
+                border: 1px solid #ccc;
+                color: #ccc;
+            }
+
+            .sp0,
+            .sp00 {
+                color: #ccc;
+                border: 1px solid #ccc;
+            }
+
+            .sp1,
+            .sp0,
+            .sp11,
+            .sp111 {
+                left: 25px;
+            }
+
+            .end,
+            .sy,
+            .sy1 {
+                position: absolute;
+                width: 200px;
+                left: 4px;
+                bottom: 5px;
+                color: #ccc;
+            }
+
+            .sy {
+                color: aqua;
+                left: 0px;
+            }
+
+            .sy1 {
+                color: red;
+            }
+
+            .p2 {
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translate(-50%);
+
+                .sp3 {
+                    color: red;
+                    bottom: 10px;
+                    left: 30px;
+                }
+            }
+
+        }
+    }
+
+    .ul_1 {
+      
+        display: block;
+    }
+    
+}
+
+.clc {
+    width: 150px;
+    margin: 0 auto;
+    cursor: pointer;
+    color: gray;
+}

@@ -24,17 +24,17 @@
         <!-- 中间导航 -->
         <div class="nav">
             <ul>
-                <li>首页</li>
-                <li>酷玩</li>
-                <li>导购</li>
-                <li>试用</li>
-                <li>报告</li>
+                <li><a href="index.html" style="color: red;">首页</a> </li>
+                <li><a href="./play/02.play-new.html">酷玩</a> </li>
+                <li><a href="./guid/05.guid-new.html">导购</a> </li>
+                <li><a href="./use/08.use-all.html">试用</a> </li>
+                <li><a href="./report/14.report-new.html">报告</a> </li>
             </ul>
         </div>
         <!-- 右侧搜索和登录 -->
         <div class="right">
             <img src="./img/css-img/search.png" alt="">
-            <button class="btn1">注册</button>
+            <button class="btn1"><a href="regist.html">注册</a> </button>
             <button class="btn2">登录</button>
         </div>
 
@@ -89,7 +89,7 @@
         <script>
             oajax('http://192.168.31.110:3000/report/new',move);
             function move(res){  
-                console.log(res);
+                // console.log(res);
                 var html = template('first',{ 
                 value:res    
                 });
@@ -212,14 +212,14 @@
     <script>
         
         var oajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP')
-        oajax.open('get','http://192.168.31.110:3000/report/hot', true)
+        oajax.open('get','http://192.168.31.110:3000/report/new', true)
         oajax.send()
         oajax.onreadystatechange = function () {
             if (oajax.readyState == 4) {
                 if (oajax.status == 200) {
                     var res = JSON.parse(oajax.responseText)
                     render(res)
-                    // console.log(res);
+                    console.log(res);
                 }
             }
         }

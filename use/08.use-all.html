@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/00.css">
+    <link rel="stylesheet" href="../css/use-all.css">
+    <script src="../js/oajax.js"></script>
+</head>
+<body>
+     <!-- 头部盒子 -->
+     <header class="heard w">
+        <!-- 左侧logo -->
+        <div class="left"><img src="./../img/image/logonew.png" alt="" width="100px"></div>
+        <!-- 中间导航 -->
+        <div class="nav">
+            <ul>
+                <li><a href="../index.html" >首页</a> </li>
+                <li><a href="../play/02.play-new.html">酷玩</a> </li>
+                <li><a href="../guid/05.guid-new.html">导购</a> </li>
+                <li><a href="../use/08.use-all.html" style="color: red;">试用</a> </li>
+                <li><a href="../report/14.report-new.html">报告</a> </li>
+
+            </ul>
+        </div>
+        <!-- 右侧搜索和登录 -->
+        <div class="right">
+            <img src="./../img/css-img/search.png" alt="">
+            <button class="btn1"><a href="../regist.html">注册</a> </button>
+            <button class="btn2">登录</button>
+        </div>
+
+    </header>
+    <!-- 免费说明 -->
+    <div class="dhz">
+        <h1>免费声明</h1>
+        <span class="sp10">大众试用</span>
+        <span class="sp20">体验师专享   
+        </span>
+        <ul class="ul_l">
+            <li class="li1">全部</li>
+            <li class="li2">申请中</li>
+            <li class="li3">试用中</li>
+            <li class="li4">已结束</li>
+        </ul>
+        <div class="hz">
+        <ul class="ul_1"></ul>
+        <ul class="ul_2"></ul>
+        <ul class="ul_3"></ul>
+        <ul class="ul_4"></ul>
+        <ul class="ul_5"></ul>
+    </div>
+    </div>
+
+    <!-- 模板 全部 -->
+<script id="on_1" type="text/html">
+{{each value}}
+<li>
+<img src="{{$value.img}}" alt="">
+{{if $value.info_ty}}
+<!-- 判断首发 -->
+<span class="sf">{{$value.info_ty}}</span>
+{{else}}
+<span class="sf1">首发</span>
+{{/if}}
+
+<p class="p1">{{$value.text}}</p>
+
+
+<!-- 判断是否结束 -->
+{{if $value.endTime}}
+<span class="sp1">{{$value.totalnum}}</span>
+<span class="sp2">{{$value.num}}</span>
+<p class="p2">
+    <span class="sp3">{{$value.apply}}</span>
+    申请
+</p>
+<span class="end">已结束:报告数量8</span>
+
+{{else if $value.uName}}
+<!-- 试用 -->
+<span class="sp11">{{$value.totalnum}}</span>
+<span class="sp22">{{$value.num}}</span>
+<p class="p2">
+    <span class="sp3">{{$value.apply}}</span>
+    申请
+</p>
+<span class="sy">查看试用名单</span>
+{{else}}
+<span class="sp111">{{$value.totalnum}}</span>
+<span class="sp222">{{$value.num}}</span>
+<p class="p2">
+    <span class="sp3">{{$value.apply}}</span>
+    申请
+</p>
+<span class="sy1">剩余2天</span>
+{{/if}}
+
+
+
+
+</li>
+{{/each}}
+</script>
+
+
+    <!-- 模板 申请中 -->
+    <script id="on_2" type="text/html">
+        {{each value}}
+        {{if $value.report}}
+        <li>
+        <img src="{{$value.img}}" alt="">
+        {{if $value.info_ty}}
+        <!-- 判断首发 -->
+        <span class="sf">{{$value.info_ty}}</span>
+        {{else}}
+        <span class="sf1">首发</span>
+        {{/if}}
+        <p class="p1">{{$value.text}}</p>
+        <span class="sp111">{{$value.totalnum}}</span>
+        <span class="sp222">{{$value.num}}</span>
+        <p class="p2">
+            <span class="sp3">{{$value.apply}}</span>
+            申请
+        </p>
+        <span class="sy1">剩余2天</span>
+        </li>
+        {{/if}}
+        {{/each}}
+        </script>
+
+    <!-- 模板 试用中 -->
+    <script id="on_3" type="text/html">
+        {{each value}}
+        {{if $value.report}}
+        
+        <li>
+        <img src="{{$value.img}}" alt="">
+        {{if $value.info_ty}}
+        <!-- 判断首发 -->
+        <span class="sf">{{$value.info_ty}}</span>
+        {{else}}
+        <span class="sf1">首发</span>
+        {{/if}}
+        <p class="p1">{{$value.text}}</p>
+        <span class="sp11">{{$value.totalnum}}</span>
+        <span class="sp22">{{$value.num}}</span>
+        <p class="p2">
+            <span class="sp3">{{$value.apply}}</span>
+            申请
+        </p>
+        <span class="sy">查看试用名单</span>
+        </li>
+        {{/if}}
+        {{/each}}
+        </script>
+    <!-- 模板 已结束 -->
+    <script id="on_4" type="text/html">
+        {{each value}}
+        {{if $value.endTime}}
+        <li>
+        <img src="{{$value.img}}" alt="">
+        {{if $value.info_ty}}
+        <!-- 判断首发 -->
+        <span class="sf">{{$value.info_ty}}</span>
+        {{else}}
+        <span class="sf1">首发</span>
+        {{/if}}
+        <p class="p1">{{$value.text}}</p>
+        <span class="sp1">{{$value.totalnum}}</span>
+        <span class="sp2">{{$value.num}}</span>
+        <p class="p2">
+            <span class="sp3">{{$value.apply}}</span>
+            申请
+        </p>
+        <span class="end">已结束</span>
+        </li>
+        {{/if}}
+        {{/each}}
+        </script>
+
+            <!-- 模板 体验师专享 -->
+    <script id="on_5" type="text/html">
+        {{each value}}
+        <li>
+        <img src="{{$value.img}}" alt="">
+        {{if $value.info_ty}}
+        <!-- 判断首发 -->
+        <span class="sf0">体验师专享</span>
+        {{else}}
+        <span class="sf0">体验师专享</span>
+        {{/if}}
+        
+        <p class="p1">{{$value.text}}</p>
+        
+        
+        <!-- 判断是否结束 -->
+        {{if $value.endTime}}
+        <span class="sp1">{{$value.totalnum}}</span>
+        <span class="sp2">{{$value.num}}</span>
+        <p class="p2">
+            <span class="sp3">{{$value.apply}}</span>
+            申请
+        </p>
+        <span class="end">已结束:报告数量8</span>
+        
+        {{else if $value.uName}}
+        <!-- 试用 -->
+        <span class="sp11">{{$value.totalnum}}</span>
+        <span class="sp22">{{$value.num}}</span>
+        <p class="p2">
+            <span class="sp3">{{$value.apply}}</span>
+            申请
+        </p>
+        <span class="sy">查看试用名单</span>
+        {{else}}
+        <span class="sp111">{{$value.totalnum}}</span>
+        <span class="sp222">{{$value.num}}</span>
+        <p class="p2">
+            <span class="sp3">{{$value.apply}}</span>
+            申请
+        </p>
+        <span class="sy1">剩余2天</span>
+        {{/if}}
+        
+        
+        
+        
+        </li>
+        {{/each}}
+        </script>
+
+        <div class="clc">
+            <p>没有更多了</p>
+        </div>
+                     <!-- 加载更多 -->
+                     <!-- <div class="clc"> 
+                        <div class="more"><img src="../img/css-img/more.png" alt=""> 点击加载更多</div>
+                        <div class="ing"><img src="../img/css-img/loading-icon.gif" alt="">正在加载更多</div>
+                        <script>
+                            var more = document.getElementsByClassName('more')[0]
+                            var ing = document.getElementsByClassName('ing')[0]
+                            var top1 = document.getElementsByClassName('dhz')[0]
+                            ing.style.display = 'none'
+                            more.onclick = function(){
+                                more.style.display = 'none'
+                                ing.style.display = 'block'
+                                setTimeout(function() {
+                                    ing.style.display = 'none'
+                                    top1.style.height = 1250+'px'
+                                }, 3000);
+                            }
+                        </script>
+                    </div> -->
+        
+<script src="../js/template-web.js"></script>
+<!-- 全部  调用ajax -->
+<script>
+    oajax('http://192.168.31.110:3000/useing/public','on_1','ul_1')
+</script>
+<!-- 申请中  调用ajax -->
+<script>
+    oajax('http://192.168.31.110:3000/useing/public','on_2','ul_2')
+</script>
+<!-- 试用中  调用ajax -->
+<script>
+    oajax('http://192.168.31.110:3000/useing/public','on_3','ul_3')
+</script>
+<!-- 已结束  调用ajax -->
+<script>
+    oajax('http://192.168.31.110:3000/useing/public','on_4','ul_4')
+</script>
+<!-- 体验师专享  调用ajax -->
+<script>
+    oajax('http://192.168.31.110:3000/useing/public','on_5','ul_5')
+</script>
+
+
+
+    <!-- 底部盒子 -->
+    <footer class="footer">
+        <!-- 版心 -->
+        <div class="w">
+            <!-- 左侧二维码 -->
+            <div class="lef"><img src="./../img/image/code.png" alt=""></div>
+            <!-- 左侧极果 -->
+            <div class="lef2"><img src="./../img/image/logoImg.jpg" alt="">
+                <div class="xhz">全球酷玩试用导购平台酷·新奇·好玩·品质</div>
+                <div class="xhz">微信添加“JguoJguo”获取我们的服务</div>
+            </div>
+            <!-- 左侧免费试用 -->
+            <div class="lef3">
+                <div class="xhz1">免费试用</div>
+                <div class="xhz2"><a href="">试用流程</a>
+                    <br>
+                    <a href="">如何提高成功率</a>
+                </div>
+            </div>
+            <!-- 左侧友情链接 -->
+            <div class="lef4">
+                <div class="xhz1">友情链接</div>
+                <table>
+                    <tr>
+                        <td>智东西</td>
+                        <td>WEIBUSI</td>
+                    </tr>
+                    <tr>
+                        <td>搜狐IT</td>
+                        <td>腾讯科技</td>
+                    </tr>
+                    <tr>
+                        <td>搜狐数码 </td>
+                        <td>凤凰科技</td>
+                    </tr>
+                    <tr>
+                        <td>凤凰数码</td>
+                        <td>PConline</td>
+                    </tr>
+                    <tr>
+                        <td>泡泡网</td>
+                        <td>WEIBUSI</td>
+                    </tr>
+                    <tr>
+                        <td>ZUK社区</td>
+                        <td> 亿觅emie</td>
+                    </tr>
+                    <tr>
+                        <td>极客公园</td>
+                        <td>易迅易启玩</td>
+                    </tr>
+                    <tr>
+                        <td>果库</td>
+                    </tr>
+
+                </table>
+            </div>
+            <!-- 左侧购买攻略 -->
+            <div class="lef5">
+                <div class="xhz1">购买攻略</div>
+                <ul>
+                    <li>美亚海淘教程</li>
+                    <li>日亚海淘教程</li>
+                    <li>海淘转运攻略</li>
+                    <li>kickstarter 众筹购买攻略</li>
+                    <li>indiegogo 众筹购买攻略</li>
+                </ul>
+            </div>
+            <!-- 左侧厂商合作 -->
+            <div class="lef6">
+                <div class="xhz1">厂商合作</div>
+                <ul>
+                    <li>关于极果</li>
+                    <li>联系我们</li>
+                    <li>商务合作：BD@jiguo.com</li>
+                    <li>CEO邮箱：CEO@jiguo.com</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="last1">
+            <p>©2016 极果版权所有</p>
+        </div>
+    </footer>
+
+
+    <script>
+        var lis = document.getElementsByClassName('ul_l')[0].children;
+        var ull = document.getElementsByClassName('hz')[0].children;
+        var sp10 = document.getElementsByClassName('sp10')[0];
+        var sp20 = document.getElementsByClassName('sp20')[0];
+
+        sp10.onclick = function(){
+            sp10.style.color='red';
+            sp20.style.color='black'
+            // dian();
+        }
+
+
+        sp20.onclick = function(){
+            sp10.style.color='black'
+            sp20.style.color='red'
+            for(var i =0;i<ull.length;i++){
+                ull[i].style.display='none'
+            }
+            ull[4].style.display='block';
+            
+        }
+
+        // function dian(){
+        for(var i=0;i<lis.length;i++){
+            demo(i)
+        }
+        function demo(k){
+            lis[k].onclick = function(){
+                for(var j =0;j<lis.length;j++){
+                    ull[j].style.display='none';
+                    ull[4].style.display='none';
+                    lis[j].style.color='black'
+                }
+                ull[k].style.display='block'
+                lis[k].style.color='red'
+            }
+        }
+    // }
+    </script>
+</body>
+</html>
