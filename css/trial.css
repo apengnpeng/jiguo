@@ -1,0 +1,59 @@
+* {
+  list-style: none;
+}
+
+.big {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.big h2 {
+  padding-bottom: 8px;
+}
+
+.big .lef {
+  margin-top: 30px;
+  float: left;
+  width: 200px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.big .lef .part {
+  width: 170px;
+  border-top: 1px solid silver;
+}
+
+.big .lef .part h4 {
+  margin-top: 10px;
+}
+
+.big .lef .part li {
+  padding: 0px 15px;
+  line-height: 30px;
+}
+
+.big .rig {
+  margin: 30px;
+  float: left;
+  width: 700px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.big .rig .fre {
+  width: 650px;
+  padding: 0 15px;
+  border-top: 1px solid silver;
+}
+
+.big .rig .fre h4 {
+  margin: 25px 0px;
+}
+
+.big .rig .fre li {
+  line-height: 30px;
+}
