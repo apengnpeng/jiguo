@@ -1,0 +1,128 @@
+.big, .big1 {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.big .pict, .big .pict1, .big1 .pict, .big1 .pict1 {
+  width: 100%;
+  height: 1000px;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+.big .pict .box, .big .pict1 .box, .big1 .pict .box, .big1 .pict1 .box {
+  float: left;
+  width: 200px;
+  margin: 15px 25px;
+  border-radius: 10px;
+  height: 220px;
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+.big .pict .box p, .big .pict1 .box p, .big1 .pict .box p, .big1 .pict1 .box p {
+  font-size: 13px;
+  padding: 5px 8px;
+}
+
+.big .pict .box .zan, .big .pict1 .box .zan, .big1 .pict .box .zan, .big1 .pict1 .box .zan {
+  position: absolute;
+  top: 180px;
+  right: 20px;
+}
+
+.big .pict .box .zan img, .big .pict1 .box .zan img, .big1 .pict .box .zan img, .big1 .pict1 .box .zan img {
+  width: 13px;
+  height: 13px;
+  vertical-align: middle;
+}
+
+.big .pict .box .zan span, .big .pict1 .box .zan span, .big1 .pict .box .zan span, .big1 .pict1 .box .zan span {
+  color: gray;
+  font-size: 12px;
+}
+
+.big .pict .box > img, .big .pict1 .box > img, .big1 .pict .box > img, .big1 .pict1 .box > img {
+  width: 200px;
+}
+
+.big .pict .box > span, .big .pict1 .box > span, .big1 .pict .box > span, .big1 .pict1 .box > span {
+  position: absolute;
+  color: red;
+  font-size: 16px;
+  bottom: 15px;
+  left: 10px;
+}
+
+.big h1, .big1 h1 {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.fir {
+  width: 300px;
+  margin: 15px auto;
+}
+
+.fir span {
+  padding: 8px 50px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.fir .aa {
+  color: orangered;
+  border-bottom: 2px solid orangered;
+}
+
+.fir .bb {
+  color: gray;
+}
+
+.fir1 {
+  width: 300px;
+  margin: 15px auto;
+}
+
+.fir1 span {
+  padding: 8px 50px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.fir1 .bb {
+  color: orangered;
+  border-bottom: 2px solid orangered;
+}
+
+.fir1 #aa {
+  color: gray;
+}
+
+.bot .ing img {
+  vertical-align: middle;
+}
+
+.bot .clc {
+  width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+  color: orangered;
+}
+
+.bot1 .ing1 img {
+  vertical-align: middle;
+}
+
+.bot1 .clc1 {
+  width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+  color: orangered;
+}
+
+.big1, .pict1, .bot1, .fir1 {
+  display: none;
+}
