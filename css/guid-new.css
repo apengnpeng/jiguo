@@ -51,6 +51,7 @@
 .big .pict .box > img:hover, .big .pict1 .box > img:hover, .big1 .pict .box > img:hover, .big1 .pict1 .box > img:hover {
   -webkit-animation: opc 1s infinite;
           animation: opc 1s infinite;
+  animation: opc 1s infinite;
 }
 
 .big .pict .box > span, .big .pict1 .box > span, .big1 .pict .box > span, .big1 .pict1 .box > span {

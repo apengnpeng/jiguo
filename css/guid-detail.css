@@ -1,0 +1,143 @@
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.big {
+  width: 1200px;
+  height: 5100px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+
+.first {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.first li {
+  float: left;
+  color: grey;
+  font-size: 14px;
+}
+
+.mid {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.mid .lef {
+  margin-top: 20px;
+  width: 700px;
+  height: 100%;
+  float: left;
+  background-color: white;
+  padding: 30px 20px;
+}
+
+.mid .lef .left1 {
+  border-bottom: 1px solid gray;
+  height: 110px;
+}
+
+.mid .lef .left1 p {
+  font-size: 24px;
+}
+
+.mid .lef .left1 span {
+  font-size: 14px;
+  color: gray;
+}
+
+.mid .lef .left1 .nam {
+  margin-top: 30px;
+}
+
+.mid .lef .left1 .nam #tim {
+  float: right;
+}
+
+.mid .lef .left2 {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.mid .lef .left2 p {
+  font-size: 16px;
+  padding: 20px 0px;
+}
+
+.mid .lef .left2 h3 {
+  text-align: center;
+}
+
+.mid .lef .left2 img {
+  width: 640px;
+}
+
+.mid .lef .left2 .nex {
+  font-size: 14px;
+  color: gray;
+}
+
+.mid .rig, .mid .rigt {
+  width: 230px;
+  height: 110px;
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.mid .rig img, .mid .rigt img {
+  width: 35px;
+}
+
+.mid .rig div, .mid .rigt div {
+  width: 110px;
+  float: left;
+  text-align: center;
+  line-height: 120px;
+  position: relative;
+}
+
+.mid .rig div p, .mid .rigt div p {
+  color: gray;
+  position: absolute;
+  left: 35px;
+  top: 30px;
+}
+
+.mid .rig .share, .mid .rigt .share {
+  border-left: 2px solid #f7f7f7;
+}
+
+.mid .rig > img {
+  width: 35px;
+}
+
+.mid .xinh, .mid .shareh {
+  width: 110px;
+  float: left;
+  text-align: center;
+  line-height: 120px;
+  position: relative;
+}
+
+.mid .xinh p, .mid .shareh p {
+  color: gray;
+  position: absolute;
+  left: 35px;
+  top: 30px;
+}
+
+.mid .shareh {
+  border-left: 2px solid #f7f7f7;
+}
+
+.bshare-custom, .xinh, .shareh {
+  display: none;
+}
