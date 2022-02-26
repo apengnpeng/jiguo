@@ -94,6 +94,10 @@
   overflow: hidden;
 }
 
+.footer a:hover {
+  color: red;
+}
+
 .footer .w {
   overflow: hidden;
   height: 300px;
@@ -204,6 +208,14 @@
 }
 
 .footer .lef6 ul li:hover {
+  color: red;
+}
+
+.footer .lef6 ul li a {
+  color: #a3a3a3;
+}
+
+.footer .lef6 ul li a:hover {
   color: red;
 }
 

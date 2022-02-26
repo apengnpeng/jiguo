@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/* 顶部大图片 */
+.picture {
+  height: 300px;
+  background-image: url(../img/css-img/original.jpg);
+  background-position: -400px;
+}
+
+.picture .move {
+  text-align: right;
+  color: white;
+  padding-top: 20px;
+  padding-right: 50px;
+  float: right;
+  width: 400px;
+  height: 200px;
+  -webkit-animation: mov 1s;
+          animation: mov 1s;
+}
+
+@-webkit-keyframes mov {
+  0% {
+    -webkit-transform: translate(100px, -100px);
+            transform: translate(100px, -100px);
+  }
+}
+
+@keyframes mov {
+  0% {
+    -webkit-transform: translate(100px, -100px);
+            transform: translate(100px, -100px);
+  }
+}
+
+.picture .move .p1 {
+  font-size: 35px;
+}
+
+.picture .move .p2 span {
+  display: inline-block;
+  background-color: #d8d1d160;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.picture .move .p3 {
+  margin-top: 20px;
+}
+
+.picture .move .btn11 {
+  margin-top: 10px;
+  width: 200px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  outline: none;
+  border: 0px;
+}
+
+/* 试用流程 */
+.lc {
+  overflow: hidden;
+  height: 100px;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  background-color: antiquewhite;
+}
+
+.lc .box {
+  float: left;
+  border-left: 5px solid red;
+  height: 60px;
+  width: 55px;
+  line-height: 30px;
+  font-size: 18px;
+  margin-left: 100px;
+  padding-left: 10px;
+}
+
+.lc .ull {
+  float: left;
+  padding-top: 5px;
+}
+
+.lc .ull li {
+  float: left;
+  width: 50px;
+  font-size: 12px;
+  text-align: center;
+  margin-left: 120px;
+}
+
+/* 产品介绍和购买渠道 */
+.dhz {
+  width: 1000px;
+  overflow: hidden;
+  margin: 30px auto;
+  /* 左侧 */
+  /* 右侧 */
+}
+
+.dhz .dom_left {
+  float: left;
+  width: 650px;
+}
+
+.dhz .dom_left h3 {
+  border-left: 5px solid red;
+  padding-left: 10px;
+  margin-top: 30px;
+}
+
+.dhz .dom_left .p1 {
+  margin-top: 15px;
+  font-size: 16px;
+  color: red;
+  font-weight: bold;
+}
+
+.dhz .dom_left .box {
+  width: 100%;
+  margin-top: 30px;
+  line-height: 25px;
+}
+
+.dhz .dom_left .tp, .dhz .dom_left .tp1 {
+  margin-top: 30px;
+  width: 650px;
+  height: 415px;
+  background-image: url(../img/image/use1.jpg);
+}
+
+.dhz .dom_left .tp1 {
+  height: 377px;
+  background-image: url(../img/image/use.jpg);
+}
+
+.dhz .dom_left .p3 {
+  margin: 30px 0px;
+  color: blue;
+}
+
+.dhz .dom_left .p4 {
+  margin: 30px 0;
+  color: aqua;
+}
+
+.dhz .dom_left .sp3 {
+  color: red;
+  font-size: 18px;
+  margin-top: 30px;
+  display: block;
+}
+
+.dhz .dom_left .ul_1 li span {
+  font-weight: bold;
+}
+
+.dhz .dom_right {
+  width: 330px;
+  float: left;
+  height: 1000px;
+  margin-left: 20px;
+}
+
+.dhz .dom_right h4 {
+  border-left: 5px solid red;
+  padding-left: 20px;
+}
+
+.dhz .dom_right .p4 {
+  height: 80px;
+  color: red;
+  font-size: 50px;
+}
+
+.dhz .dom_right button {
+  width: 300px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  outline: none;
+  border: 0px;
+}
+
+.dhz .dom_right .p41 {
+  width: 100px;
+  margin: 10px auto;
+  color: #ccc;
+}
+
+.dhz .dom_right .tp {
+  margin-top: 30px;
+}
+
+.dhz .dom_right .box {
+  color: gray;
+  margin: 10px auto;
+}
+
+.dhz .dom_right h3 {
+  font-size: 16px;
+  margin: 10 auto;
+}
+
+.dhz .dom_right .hzz {
+  width: 350px;
+}
+
+/* 热门试用 */
+.pp {
+  width: 1000px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.last {
+  width: 1000px;
+  margin: 20px auto;
+  height: 230px;
+  overflow: hidden;
+}
+
+.last li {
+  float: left;
+  height: 230px;
+  border: 1px solid gray;
+  text-align: center;
+  margin-left: 30px;
+  position: relative;
+}
+
+.last li img {
+  width: 200px;
+}
+
+.last li .p1 {
+  margin-bottom: 10px;
+}
+
+.last li .sp11, .last li .sp22, .last li .sp33, .last li .p33 {
+  position: absolute;
+  border: 1px solid red;
+  left: 60px;
+  color: red;
+  border-radius: 5px;
+}
+
+.last li .sp22 {
+  left: 120px;
+  width: 30px;
+}
+
+.last li .sp33 {
+  bottom: 20px;
+  border: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.last li .p33 {
+  bottom: 3px;
+  border: 0px;
+}

@@ -80,6 +80,11 @@
     color: #a3a3a3;
     font-size: 14px;
     overflow: hidden;
+    a{
+        &:hover{
+            color: red;
+        }
+    }
     .w{
         overflow: hidden;
         height: 300px;
@@ -170,6 +175,12 @@
                 margin-top: 5px;
                 &:hover{
                     color: red;
+                }
+                a{
+                    color: #a3a3a3;
+                    &:hover{
+                        color: red;
+                    }
                 }
             }
         }

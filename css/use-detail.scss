@@ -1,0 +1,229 @@
+/* 顶部大图片 */
+.picture{
+    height: 300px;
+    background-image: url(../img/css-img/original.jpg);
+    background-position: -400px;
+    .move{
+        text-align: right;
+        color: white;
+        padding-top: 20px;
+        padding-right: 50px;
+        float: right;
+        width: 400px;
+        height: 200px;
+        animation: mov 1s;
+        @keyframes mov {
+            0%{
+                transform: translate(100px,-100px);
+            }
+        }
+        .p1{
+            font-size: 35px;
+        }
+        .p2{
+            span{
+                display: inline-block;
+                background-color: #d8d1d160;
+                margin-left: 20px;
+                margin-top: 20px;
+            }
+        }
+        .p3{
+            margin-top: 20px;
+        }
+        .btn11{
+            margin-top: 10px;
+            width: 200px;
+            height: 40px;
+            background-color: red;
+            color: white;
+            outline: none;
+            border: 0px;
+        }
+    }
+}
+
+/* 试用流程 */
+.lc{
+    overflow: hidden;
+    height: 100px;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background-color: antiquewhite;
+    .box{
+        float: left;
+        border-left: 5px solid red;
+        height: 60px;
+        width: 55px;
+        line-height: 30px;
+        font-size: 18px;
+        margin-left: 100px;
+        padding-left: 10px;
+    }
+    .ull{
+        float: left;
+        padding-top: 5px;
+        li{
+            float: left;
+            width: 50px;
+            font-size: 12px;
+            text-align: center;
+            margin-left: 120px;
+        }
+    }
+}
+
+/* 产品介绍和购买渠道 */
+
+.dhz{
+    width: 1000px;
+    overflow: hidden;
+    margin: 30px auto;
+    /* 左侧 */
+    .dom_left{
+        float: left;
+        width: 650px;
+        h3{
+            border-left: 5px solid red;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+        .p1{
+            margin-top: 15px;
+            font-size: 16px;
+            color: red;
+            font-weight: bold;
+        }
+        .box{
+            width: 100%;
+            margin-top: 30px;
+            line-height: 25px;
+        }
+        .tp,.tp1{
+            margin-top: 30px;
+            width: 650px;
+            height: 415px;
+            background-image: url(../img/image/use1.jpg);
+        }
+        .tp1{
+            height: 377px;
+            background-image: url(../img/image/use.jpg);
+        }
+        .p3{
+            margin: 30px 0px;
+            color: blue;
+        }
+        .p4{
+            margin: 30px 0;
+            color: aqua;
+        }
+        .sp3{
+            color: red;
+            font-size: 18px;
+            margin-top: 30px;
+            display: block;
+        }
+        .ul_1{
+            li{
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    /* 右侧 */
+    .dom_right{
+        width: 330px;
+        float: left;
+        height: 1000px;
+        margin-left: 20px;
+        h4{
+            border-left: 5px solid red;
+            padding-left: 20px;
+        }
+        .p4{
+            height: 80px;
+            color: red;
+            font-size: 50px;
+        }
+        button{
+            width: 300px;
+            height: 60px;
+            border-radius: 10px;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            outline: none;
+            border: 0px;
+        }
+        .p41{
+            width: 100px;
+            margin:10px auto;
+            color: #ccc;
+        }
+        .tp{
+            margin-top: 30px;
+        }
+        .box{
+            color: gray;
+            margin: 10px auto;
+        }
+        h3{
+            font-size: 16px;
+            margin: 10 auto;
+        }
+        .hzz{
+            width: 350px;
+        }
+    }
+
+}
+/* 热门试用 */
+.pp{
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+.last{
+    width: 1000px;
+    margin: 20px auto;
+    height: 230px;
+    overflow: hidden;
+    li{
+        float: left;
+        height: 230px;
+        border: 1px solid gray;
+        text-align: center;
+        margin-left: 30px;
+        position: relative;
+        img{
+            width: 200px;
+        }
+        .p1{
+            margin-bottom: 10px;
+        }
+        .sp11,.sp22,.sp33,.p33{
+            position: absolute;
+            border: 1px solid red;
+            left: 60px;
+            color: red;
+            border-radius: 5px;
+        }
+        .sp22{
+            left: 120px;
+            width: 30px;
+        }
+        .sp33{
+            bottom: 20px;
+            border: 0px;
+            left: 50%;
+            transform: translateX(-50% );
+        }
+        .p33{
+            bottom: 3px;
+            border: 0px;
+        }
+    }
+}

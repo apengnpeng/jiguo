@@ -1,0 +1,108 @@
+.content {
+  overflow: hidden;
+  padding-top: 50px;
+  width: 1000px;
+  height: 500px;
+  margin: 100px auto;
+  border: 1px solid;
+}
+
+.content .left {
+  padding: 30px;
+  width: 500px;
+  height: 400px;
+  float: left;
+  margin-left: 50px;
+  border-right: 1px solid;
+}
+
+.content .left .p1 {
+  font-size: 25px;
+}
+
+.content .left .box {
+  width: 400px;
+  margin-top: 40px;
+  height: 40px;
+  background-color: blueviolet;
+}
+
+.content .left .box input {
+  height: 40px;
+  width: 400px;
+  outline: none;
+  font-size: 18px;
+}
+
+.content .left .box1 {
+  overflow: hidden;
+  width: 400px;
+  margin-top: 20px;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.content .left .box1 .sp2 {
+  float: left;
+}
+
+.content .left .box1 .sp2 a {
+  color: black;
+}
+
+.content .left .box1 .sp2 a:hover {
+  color: red;
+}
+
+.content .left .box1 button {
+  float: right;
+  width: 150px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: red;
+  outline: none;
+  border: 0px;
+  color: white;
+  font-size: 16px;
+}
+
+.content .left .box1 button a {
+  color: white;
+}
+
+.content .left .box1 .sp3 {
+  float: right;
+}
+
+.content .right {
+  padding-top: 10px;
+  width: 350px;
+  height: 400px;
+  float: right;
+  margin-right: 50px;
+}
+
+.content .right .p2 {
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.content .right .tp {
+  width: 280px;
+  height: 280px;
+  margin: 20px auto;
+}
+
+.content .right .tp2 {
+  margin-top: 10px;
+  width: 280px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.content .right .tp2 img {
+  margin-left: 20px;
+}
