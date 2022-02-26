@@ -75,6 +75,11 @@
                         color: gray;
                         font-size: 14px;
                         margin-top: 30px;
+                        img{
+                            border-radius: 50%;
+                            width: 25px;
+                            vertical-align: middle;
+                        }
                         span {
                             font-size: 13px;
                             color: orangered;
@@ -145,7 +150,11 @@
     background: url(./../img/image/bg5.jpg) no-repeat;
 }
 .midhot{
-    display: none;
+     display: none;
+     .onea,.twoa,.threea,.foura,.fivea{
+         margin-bottom: 15px;
+     }
+    
 }
 .onea{
     background: url(./../img/image/bg8.jpg) no-repeat;
