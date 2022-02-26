@@ -1,0 +1,92 @@
+.content{
+    overflow: hidden;
+    padding-top: 50px;
+    width: 1000px;
+    height: 500px;
+    margin: 100px auto;
+    border: 1px solid;
+    .left{
+        padding: 30px;
+        width: 500px;
+        height: 400px;
+        float: left;
+        margin-left: 50px;
+        border-right: 1px solid;
+        .p1{
+            font-size: 25px;
+        }
+        .box{
+            width: 400px;
+            margin-top: 40px;
+            height: 40px;
+            background-color: blueviolet;
+            input{
+                height: 40px;
+                width: 400px;
+                outline: none;
+                font-size: 18px;
+            }
+        }
+        .box1{
+            overflow: hidden;
+            width: 400px;
+            margin-top: 20px;
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
+            .sp2{
+                float: left;
+                a{
+                    color: black;
+                    &:hover{
+                        color: red;
+                    }
+                }
+            }
+            button{
+                float: right;
+                width: 150px;
+                height: 40px;
+                border-radius: 20px;
+                background-color: red;
+                outline: none;
+                border: 0px;
+                color: white;
+                font-size: 16px;
+                a{
+                    color: white;
+                }
+            }
+            .sp3{
+                float: right;
+            }
+        }
+    }
+    .right{
+        padding-top: 10px;
+        width: 350px;
+        height: 400px;
+        float: right;
+        margin-right: 50px;
+        .p2{
+            width: 150px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 18px;
+        }
+        .tp{
+            width: 280px;
+            height: 280px;
+            margin: 20px auto;
+        }
+        .tp2{
+            margin-top: 10px;
+            width: 280px;
+            height: 50px;
+            margin: 0 auto;
+            img{
+                margin-left: 20px;
+            }
+        }
+    }
+}
