@@ -174,6 +174,10 @@
   display: none;
 }
 
+.midhot .onea, .midhot .twoa, .midhot .threea, .midhot .foura, .midhot .fivea {
+  margin-bottom: 15px;
+}
+
 .onea {
   background: url(./../img/image/bg8.jpg) no-repeat;
 }

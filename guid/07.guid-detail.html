@@ -116,7 +116,7 @@
                 <div class="xin"><img src="./../img/css-img/xinRedo.png" alt=""><p class="rig1">喜欢 15</p></div>
                 <div class="share"><img src="./../img/css-img/share_yj1.png" alt=""><p> 分享</p></div>
                 <!-- 红心 -->
-                <div class="xinh"><img src="./../img/css-img/xinRedh.png" alt=""><p class="rig1">喜欢 15</p></div>
+                <div class="xinh"><img src="./../img/css-img/xinRedh.png" alt=""><p class="rig1">喜欢 16</p></div>
                 <div class="shareh"><img src="./../img/css-img/shareh_yj1.png" alt=""><p> 分享</p></div>
                 <!-- 分享 -->
                 <div class="bshare-custom">
@@ -137,10 +137,13 @@
     <script>
         var bs = document.getElementsByClassName('bshare-custom')[0]
         var xin = document.getElementsByClassName('xin')[0]
+        var xinh = document.getElementsByClassName('xinh')[0]
         var share = document.getElementsByClassName('share')[0]
+        var shareh = document.getElementsByClassName('shareh')[0]
         xin.onclick = function(){
             xin.style.display = 'none'
             xinh.style.display = 'block'
+            share.style.display = 'block'
         }
         share.onclick = function(){
             share.style.display = 'none'

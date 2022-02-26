@@ -73,6 +73,7 @@
         }
     }
     .rig,.rigt{
+        overflow: hidden;
         width: 230px;
         height: 110px;
         float: left;
@@ -84,6 +85,7 @@
             width: 35px;
         }
         div{
+            overflow: hidden;
             width: 110px;
             float: left;
             text-align: center;
@@ -106,6 +108,7 @@
         width: 35px;
     }
     .xinh,.shareh{
+        overflow: hidden;
         width: 110px;
         float: left;
         text-align: center;
@@ -123,10 +126,11 @@
     }
 
 }
-
-
-
 .bshare-custom,.xinh,.shareh{
     
     display: none;
+}
+.bshare-custom{
+    margin-left: 110px;
+    z-index: 2;
 }
