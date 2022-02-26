@@ -1,136 +1,148 @@
-*{
+* {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-decoration: none;
 }
-.big{
+.big {
     width: 1200px;
     height: 5100px;
     margin: 0 auto;
     background-color: #f7f7f7;
 }
-.first{
+.first {
     width: 1000px;
     margin: 0 auto;
     padding-top: 20px;
-    li{
+    li {
         float: left;
         color: grey;
         font-size: 14px;
     }
 }
-.mid{
+.mid {
     width: 1000px;
     margin: 0 auto;
-    .lef{
+    .lef {
         margin-top: 20px;
         width: 700px;
         height: 100%;
         float: left;
         background-color: white;
-        padding:30px 20px;
-        .left1{
+        padding: 30px 20px;
+        .left1 {
             border-bottom: 1px solid gray;
             height: 110px;
-            p{
+            p {
                 font-size: 24px;
-               
             }
-            span{
+            span {
                 font-size: 14px;
                 color: gray;
             }
-            .nam{
+            .nam {
                 margin-top: 30px;
+                img{
+                    width: 30px;
+                    vertical-align: middle;     
+                }
                 // overflow: hidden;
-                #tim{
+                #tim {
+                    margin-top: 8px;
                     float: right;
                 }
             }
-            
-
         }
-        .left2{
+        .left2 {
             width: 640px;
             margin: 0 auto;
-           
-            p{
+
+            p {
                 font-size: 16px;
                 padding: 20px 0px;
             }
-            h3{
-               text-align: center;
+            h3 {
+                text-align: center;
             }
-            img{
-                width: 640px;       
+            img {
+                width: 640px;
                 // margin-left: 15px;
             }
-            .nex{
+            .nex {
                 font-size: 14px;
                 color: gray;
-
             }
         }
     }
-    .rig,.rigt{
-        overflow: hidden;
+    .rig {
+        // overflow: hidden;
         width: 230px;
         height: 110px;
         float: left;
         margin-top: 20px;
         margin-left: 20px;
         border-radius: 10px;
+        position: relative;
         background-color: white;
-        img{
-            width: 35px;
+        img {
+            width: 30px;
         }
-        div{
-            overflow: hidden;
-            width: 110px;
-            float: left;
-            text-align: center;
-            line-height: 120px;
+        .xin {
             position: relative;
-            p{
+            width: 110px;
+            height: 110px;
+            float: left;
+            #x1 {
+                position: absolute;
+                top: 30px;
+                left: 40px;
+            }
+            #x2 {
+                position: absolute;
+                display: none;
+                top: 30px;
+                left: 40px;
+            }
+            .d1 {
                 color: gray;
                 position: absolute;
                 left: 35px;
-                top: 30px;
+                top: 70px;
             }
         }
-        .share{
+        .share { 
+            position: relative;
+            width: 110px;
+            height: 110px;
+            float: left;
             border-left: 2px solid #f7f7f7;
-        }
- 
-    }
-
-    .rig>img{
-        width: 35px;
-    }
-    .xinh,.shareh{
-        overflow: hidden;
-        width: 110px;
-        float: left;
-        text-align: center;
-        line-height: 120px;
-        position: relative;
-        p{
-            color: gray;
-            position: absolute;
-            left: 35px;
-            top: 30px;
+            #s1 {
+                position: absolute;
+                top: 30px;
+                right: 40px;
+            }
+            #s2 {
+                position: absolute;
+                display: none;
+                top: 30px;
+                right: 40px;
+            }
+            .d2 {
+                color: gray;
+                position: absolute;
+                right: 35px;
+                top: 70px;
+            }
         }
     }
-    .shareh{
-        border-left: 2px solid #f7f7f7;
-    }
 
-}
-.bshare-custom,.xinh,.shareh{
-    
-    display: none;
-}
-.bshare-custom{
-    margin-left: 110px;
-    z-index: 2;
+  
+    .bshare-custom {
+        width: 200px;
+        height: 10px;
+        position: absolute;
+        top: 90px;
+        left: 90px;
+        display: none;
+    }
 }

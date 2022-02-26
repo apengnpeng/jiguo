@@ -94,6 +94,12 @@
   margin-top: 30px;
 }
 
+.bgm .mid .lef .one .one_1 .p1 img, .bgm .mid .lef .two .one_1 .p1 img, .bgm .mid .lef .three .one_1 .p1 img, .bgm .mid .lef .four .one_1 .p1 img, .bgm .mid .lef .five .one_1 .p1 img, .bgm .mid .lef .onea .one_1 .p1 img, .bgm .mid .lef .twoa .one_1 .p1 img, .bgm .mid .lef .threea .one_1 .p1 img, .bgm .mid .lef .foura .one_1 .p1 img, .bgm .mid .lef .fivea .one_1 .p1 img, .bgm .midhot .lef .one .one_1 .p1 img, .bgm .midhot .lef .two .one_1 .p1 img, .bgm .midhot .lef .three .one_1 .p1 img, .bgm .midhot .lef .four .one_1 .p1 img, .bgm .midhot .lef .five .one_1 .p1 img, .bgm .midhot .lef .onea .one_1 .p1 img, .bgm .midhot .lef .twoa .one_1 .p1 img, .bgm .midhot .lef .threea .one_1 .p1 img, .bgm .midhot .lef .foura .one_1 .p1 img, .bgm .midhot .lef .fivea .one_1 .p1 img {
+  border-radius: 50%;
+  width: 25px;
+  vertical-align: middle;
+}
+
 .bgm .mid .lef .one .one_1 .p1 span, .bgm .mid .lef .two .one_1 .p1 span, .bgm .mid .lef .three .one_1 .p1 span, .bgm .mid .lef .four .one_1 .p1 span, .bgm .mid .lef .five .one_1 .p1 span, .bgm .mid .lef .onea .one_1 .p1 span, .bgm .mid .lef .twoa .one_1 .p1 span, .bgm .mid .lef .threea .one_1 .p1 span, .bgm .mid .lef .foura .one_1 .p1 span, .bgm .mid .lef .fivea .one_1 .p1 span, .bgm .midhot .lef .one .one_1 .p1 span, .bgm .midhot .lef .two .one_1 .p1 span, .bgm .midhot .lef .three .one_1 .p1 span, .bgm .midhot .lef .four .one_1 .p1 span, .bgm .midhot .lef .five .one_1 .p1 span, .bgm .midhot .lef .onea .one_1 .p1 span, .bgm .midhot .lef .twoa .one_1 .p1 span, .bgm .midhot .lef .threea .one_1 .p1 span, .bgm .midhot .lef .foura .one_1 .p1 span, .bgm .midhot .lef .fivea .one_1 .p1 span {
   font-size: 13px;
   color: orangered;

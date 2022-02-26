@@ -52,6 +52,7 @@
                 <div class="left1">
                     <p>2016，这8只钢笔够你装逼一整年</p>
                     <div class="nam">
+                        <img src="./../img/css-img/tx.jpg" alt="" id="img1">
                         <span>苏苏</span>
                         <span id="tim">2016-01-25</span>
                     </div>
@@ -112,12 +113,22 @@
 
           
             <div class="rig">
-                <!-- 白心 -->
-                <div class="xin"><img src="./../img/css-img/xinRedo.png" alt=""><p class="rig1">喜欢 15</p></div>
-                <div class="share"><img src="./../img/css-img/share_yj1.png" alt=""><p> 分享</p></div>
-                <!-- 红心 -->
-                <div class="xinh"><img src="./../img/css-img/xinRedh.png" alt=""><p class="rig1">喜欢 16</p></div>
-                <div class="shareh"><img src="./../img/css-img/shareh_yj1.png" alt=""><p> 分享</p></div>
+                <div class="xin">
+                    <!-- 白 -->
+                    <img src="./../img/css-img/xinRedo.png" alt="" id="x1">
+                    <!-- 红 -->
+                    <img src="./../img/css-img/xinRedh.png" alt="" id="x2">
+                    <div class="d1">喜欢 <span id="numb">15</span></div>
+
+                </div>
+                <div class="share">
+                    <!-- 白 -->
+                    <img src="./../img/css-img/share_yj1.png" alt="" id="s1">
+                    <!-- 红 -->
+                    <img src="./../img/css-img/shareh_yj1.png" alt=""id="s2">
+                    <div class="d2">分享</div>
+
+                </div>
                 <!-- 分享 -->
                 <div class="bshare-custom">
                     <a title="分享到QQ空间" class="bshare-qzone"></a>
@@ -132,22 +143,23 @@
                     src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
                 <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
             </div>
+            
         </div>
     </div>
     <script>
         var bs = document.getElementsByClassName('bshare-custom')[0]
         var xin = document.getElementsByClassName('xin')[0]
-        var xinh = document.getElementsByClassName('xinh')[0]
         var share = document.getElementsByClassName('share')[0]
-        var shareh = document.getElementsByClassName('shareh')[0]
+        var num =15
         xin.onclick = function(){
-            xin.style.display = 'none'
-            xinh.style.display = 'block'
-            share.style.display = 'block'
+            x1.style.display = 'none'
+            x2.style.display = 'block'
+            num ++
+            numb.innerHTML = num
         }
         share.onclick = function(){
-            share.style.display = 'none'
-            shareh.style.display = 'block'
+            s1.style.display = 'none'
+            s2.style.display = 'block'
             bs.style.display = 'block'
 
         }

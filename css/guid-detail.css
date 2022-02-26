@@ -2,6 +2,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 .big {
@@ -55,7 +56,13 @@
   margin-top: 30px;
 }
 
+.mid .lef .left1 .nam img {
+  width: 30px;
+  vertical-align: middle;
+}
+
 .mid .lef .left1 .nam #tim {
+  margin-top: 8px;
   float: right;
 }
 
@@ -82,70 +89,81 @@
   color: gray;
 }
 
-.mid .rig, .mid .rigt {
-  overflow: hidden;
+.mid .rig {
   width: 230px;
   height: 110px;
   float: left;
   margin-top: 20px;
   margin-left: 20px;
   border-radius: 10px;
+  position: relative;
   background-color: white;
 }
 
-.mid .rig img, .mid .rigt img {
-  width: 35px;
+.mid .rig img {
+  width: 30px;
 }
 
-.mid .rig div, .mid .rigt div {
-  overflow: hidden;
-  width: 110px;
-  float: left;
-  text-align: center;
-  line-height: 120px;
+.mid .rig .xin {
   position: relative;
-}
-
-.mid .rig div p, .mid .rigt div p {
-  color: gray;
-  position: absolute;
-  left: 35px;
-  top: 30px;
-}
-
-.mid .rig .share, .mid .rigt .share {
-  border-left: 2px solid #f7f7f7;
-}
-
-.mid .rig > img {
-  width: 35px;
-}
-
-.mid .xinh, .mid .shareh {
-  overflow: hidden;
   width: 110px;
+  height: 110px;
   float: left;
-  text-align: center;
-  line-height: 120px;
-  position: relative;
 }
 
-.mid .xinh p, .mid .shareh p {
-  color: gray;
+.mid .rig .xin #x1 {
   position: absolute;
-  left: 35px;
   top: 30px;
+  left: 40px;
 }
 
-.mid .shareh {
-  border-left: 2px solid #f7f7f7;
-}
-
-.bshare-custom, .xinh, .shareh {
+.mid .rig .xin #x2 {
+  position: absolute;
   display: none;
+  top: 30px;
+  left: 40px;
 }
 
-.bshare-custom {
-  margin-left: 110px;
-  z-index: 2;
+.mid .rig .xin .d1 {
+  color: gray;
+  position: absolute;
+  left: 35px;
+  top: 70px;
+}
+
+.mid .rig .share {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  float: left;
+  border-left: 2px solid #f7f7f7;
+}
+
+.mid .rig .share #s1 {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+.mid .rig .share #s2 {
+  position: absolute;
+  display: none;
+  top: 30px;
+  right: 40px;
+}
+
+.mid .rig .share .d2 {
+  color: gray;
+  position: absolute;
+  right: 35px;
+  top: 70px;
+}
+
+.mid .bshare-custom {
+  width: 200px;
+  height: 10px;
+  position: absolute;
+  top: 90px;
+  left: 90px;
+  display: none;
 }

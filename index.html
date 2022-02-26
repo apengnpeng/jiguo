@@ -59,6 +59,7 @@
            <!-- 轮播图 -->
            <div class="w">
             <h2 class="rm">热门试用</h2>
+            <a name='mao'></a>
         <div class="lbt">
             <!-- 显示窗口 -->
             <div class="ck">
@@ -110,7 +111,7 @@
     <div class="box">
        <img src="{{$value.img}}" alt=""> 
         <p>{{$value.text}}</p>
-        <div class="nam">{{$value.uName}}</div>
+        <div class="nam">● 苏苏</div>
         <div class="zan">
             <img src="./img/css-img/zan.png" alt="">
             <span>3</span>
@@ -173,7 +174,7 @@
         {{/each}}
     </script>
     <script>
-        oajax('http://192.168.31.110:3000/report/new',render_2)
+        oajax('http://192.168.31.110:3000/guid/new',render_2)
         function render_2(res) {
             var rep_2 = template('sec', {
                 value: res
@@ -195,9 +196,66 @@
     <script id="tir" type="text/html">
         {{each value}}
         <div class="box">
-           <img src="{{$value.img}}" alt=""> 
-            <p>{{$value.text}}</p>
-            <span>￥xx.xx</span> 
+           <img src="{{$value[1].img}}" alt=""> 
+            <p>{{$value[1].text}}</p>
+            <!-- <span>￥xx.xx</span>  -->
+            <span>{{$value[1].price}}</span>
+            <div class="zan">
+                <img src="./img/css-img/xin.png" alt="">
+                <span>3</span>
+                <img src="./img/css-img/reply.png" alt="">
+                <span>3</span>
+            </div>
+        </div>
+        {{/each}}
+        {{each value}}
+        <div class="box">
+           <img src="{{$value[2].img}}" alt=""> 
+            <p>{{$value[2].text}}</p>
+            <!-- <span>￥xx.xx</span>  -->
+            <span>{{$value[2].price}}</span>
+            <div class="zan">
+                <img src="./img/css-img/xin.png" alt="">
+                <span>3</span>
+                <img src="./img/css-img/reply.png" alt="">
+                <span>3</span>
+            </div>
+        </div>
+        {{/each}}
+        {{each value}}
+        <div class="box">
+           <img src="{{$value[3].img}}" alt=""> 
+            <p>{{$value[3].text}}</p>
+            <!-- <span>￥xx.xx</span>  -->
+            <span>{{$value[3].price}}</span>
+            <div class="zan">
+                <img src="./img/css-img/xin.png" alt="">
+                <span>3</span>
+                <img src="./img/css-img/reply.png" alt="">
+                <span>3</span>
+            </div>
+        </div>
+        {{/each}}
+        {{each value}}
+        <div class="box">
+           <img src="{{$value[4].img}}" alt=""> 
+            <p>{{$value[4].text}}</p>
+            <!-- <span>￥xx.xx</span>  -->
+            <span>{{$value[4].price}}</span>
+            <div class="zan">
+                <img src="./img/css-img/xin.png" alt="">
+                <span>3</span>
+                <img src="./img/css-img/reply.png" alt="">
+                <span>3</span>
+            </div>
+        </div>
+        {{/each}}
+        {{each value}}
+        <div class="box">
+           <img src="{{$value[5].img}}" alt=""> 
+            <p>{{$value[5].text}}</p>
+            <!-- <span>￥xx.xx</span>  -->
+            <span>{{$value[5].price}}</span>
             <div class="zan">
                 <img src="./img/css-img/xin.png" alt="">
                 <span>3</span>
@@ -212,7 +270,7 @@
     <script>
         
         var oajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP')
-        oajax.open('get','http://192.168.31.110:3000/report/new', true)
+        oajax.open('get','http://192.168.31.110:3000/play/new', true)
         oajax.send()
         oajax.onreadystatechange = function () {
             if (oajax.readyState == 4) {
@@ -339,6 +397,7 @@
             </div>
 
         </div>
+        <div class="mao"><a href="#"><img src="./img/css-img/back.png" alt=""></a></div>
         <div class="last1">
             <p>©2016 极果版权所有</p>
         </div>
