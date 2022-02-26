@@ -51,6 +51,7 @@
                 <div class="box">
                     <input type="text" name="" id="yzm" placeholder="请输入4位数字验证码">
                     <span class="sp1">获取验证码</span>
+                    <span id="spp"></span>
                 </div>
                 <!-- 用户名 -->
                 <div class="box">
@@ -70,14 +71,16 @@
             </div>
 
             <script>
+
                 var btnn = document.getElementsByClassName('btnn')[0];
+                var bn = document.getElementsByClassName('sp1')[0];
                 btnn.onclick = function(){
                     // 正则----验证手机号
                 var yz1 = /^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/;  
                     // 正则----用户名
-                    var yz2 = /^[\u4e00-\u9fa5]{2,3}$/
+                    var yz2 = /^\w{4,8}$/
                     // 正则 ----密码
-                    var yz3 = /^\w{4,10}$/;
+                    var yz3 = /^\w{6,12}$/;
                 if( yz1.test(phone.value)==false){
                     alert('错误，请输入正确的手机号')
                 }
@@ -88,7 +91,53 @@
                 }else if(pwd.value != pwd2.value){
                     alert('两次输入密码要一致')
                 }
+            
+
+            // 请求后台
+
+         var oajax = new XMLHttpRequest() || new ActiveXObject("Microsoft.XMLHTTP");
+        oajax.open('post','http://192.168.31.110:3000/users/register',true);
+        var us ='phone='+phone.value+'&code='+code.value+'&username='+username.value+'&password='+pwd.value;
+        oajax.setRequestHeader('Content-type','application/x-www-form-urlencoded')
+        oajax.send(us);
+        oajax.onreadystatechange = function(){
+        if(oajax.readyState ===4 && oajax.status === 200){
+                var res=JSON.parse(oajax.responseText); //拿到数据结果
+                if(res.msg=='验证成功'){
+                    alert('注册成功')
+                }
             }
+        }
+    }
+
+// 计时器
+            function r(){
+                return parseInt(Math.random()*9999-1000+1)+1000;
+            }
+            var num =10;    
+            var isrun =true;    
+            var trim;  
+            bn.onclick = function(){
+                bn.innerHTML=r();
+                if(isrun){
+                    isrun = false;
+                    trim = setInterval(function(){ 
+                        spp.style.display='block'
+                        num--;  
+                        spp.innerHTML=num+'秒后刷验证码';  
+                        if(num<=0){
+                            spp.style.display='none'
+                            clearInterval(trim);    //-------清除当前计时器（这样当前计时器的（isrun=fales）就干掉了）为了下次点击还可以继续重新执行计时器
+                        isrun=true; //------------------更改isrun的值，当第一次计时器执行完毕后，把他干掉，并把isrun改为true，下次再点击的时候 还能正常执行计时器
+                        num=10; //---------------------下次开始还是从10开始计时
+                        bn.innerHTML='短信验证';   //--倒计时结束后，页面显现‘短信验证’
+                    }
+                },1000) //-------------------------每过1s 执行一下计时器num--
+            }
+        }
+                // setTimeout(function(){
+                //     bn.innerHTML='重新获取验证码'
+                // },10000)
             </script>
         </div>
 

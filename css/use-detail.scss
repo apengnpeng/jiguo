@@ -39,6 +39,10 @@
             color: white;
             outline: none;
             border: 0px;
+            &:hover{
+                color: blue;
+                transform: scale(1.2);
+            }
         }
     }
 }
@@ -70,6 +74,9 @@
             font-size: 12px;
             text-align: center;
             margin-left: 120px;
+            &:hover img{
+                transform: scale(1.3);
+            }
         }
     }
 }

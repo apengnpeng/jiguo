@@ -58,7 +58,13 @@
 
            <!-- 轮播图 -->
            <div class="w">
+               <div class="hz">
+                <button id="shang"> 》 </button>
+                <button id="xia"> 《 </button>
+               </div>
+           
             <h2 class="rm">热门试用</h2>
+
         <div class="lbt">
             <!-- 显示窗口 -->
             <div class="ck">
@@ -72,9 +78,11 @@
             {{each value}}
             <div class="div">
             <img src="{{$value.img}}" alt="">
-
+                {{if $value.info_ty}}
             <p class="po">{{$value.info_ty}}</p>
-
+                {{else}}
+            <p class="po">首发</p>
+                {{/if}}
             <p class="p1">{{$value.text}}</p>
             <span class="sp1">{{$value.totalnum}}</span>
             <span class="sp2">{{$value.num}}</span>

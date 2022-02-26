@@ -57,6 +57,12 @@
   border: 0px;
 }
 
+.picture .move .btn11:hover {
+  color: blue;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 /* 试用流程 */
 .lc {
   overflow: hidden;
@@ -89,6 +95,11 @@
   font-size: 12px;
   text-align: center;
   margin-left: 120px;
+}
+
+.lc .ull li:hover img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 /* 产品介绍和购买渠道 */

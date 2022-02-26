@@ -134,8 +134,8 @@
     <!-- 模板 试用中 -->
     <script id="on_3" type="text/html">
         {{each value}}
-        {{if $value.report}}
-        
+        {{if $value.endTime}}
+        {{else}}
         <li>
         <img src="{{$value.img}}" alt="">
         {{if $value.info_ty}}

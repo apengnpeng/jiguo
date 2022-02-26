@@ -90,7 +90,7 @@
 .top .ull3 .hl {
   border: 1px solid;
   width: 1000px;
-  height: 550px;
+  height: 450px;
   margin-top: 30px;
 }
 
@@ -108,7 +108,7 @@
 .top .ull3 .sh .u3_1,
 .top .ull3 .hl .u3_1 {
   width: 1000px;
-  height: 300px;
+  height: 150px;
   overflow: hidden;
 }
 

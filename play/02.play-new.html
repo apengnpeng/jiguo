@@ -46,7 +46,9 @@
 
     <ul class="ull"></ul>
     <ul class="ull2"></ul>
-    <ul class="ull3"></ul>         
+    <ul class="ull3"></ul> 
+    <br>  
+         <p>到底啦 没有信息了</p> 
     </div>
         <!-- 加载更多 -->
          <div class="clc"> 
@@ -270,13 +272,13 @@
         <li>
             <p>
                 <span class="sp2">{{$value[1].productName}}</span>
-                <span class="sp1">({{$value[0].nums}})</span>
+                <span class="sp1">({{$value[1].nums}})</span>
              </p>
             </li>
             <li>
                 <p>
-                    <span class="sp2">{{$value[3].productName}}</span>
-                    <span class="sp1">({{$value[0].nums}})</span>
+                    <span class="sp2">{{$value[1].productName}}</span>
+                    <span class="sp1">({{$value[1].nums}})</span>
                  </p>
                 </li>
             {{/each}}
@@ -287,6 +289,7 @@
             <h2>护理</h2>
             <ul class="u3_1">
           {{each value}}
+          {{if $value[1].icon}}
           <li>
               <img src="{{$value[1].icon}}" alt="">
               <p>
@@ -294,7 +297,7 @@
               <span class="sp1">({{$value[1].nums}})</span>
            </p>
           </li>
-          
+          {{/if}}
           {{/each}}
           </ul>
           <ul class="u3_2">
@@ -325,14 +328,15 @@
             <h2>健康</h2>
             <ul class="u3_1">
           {{each value}}
+          {{if $value[2].icon}}
           <li>
-              <img src="{{$value[0].icon}}" alt="">
+              <img src="{{$value[2].icon}}" alt="">
               <p>
               <span class="sp2">{{$value[3].productName}}</span>
               <span class="sp1">({{$value[3].nums}})</span>
            </p>
           </li>
-          
+          {{/if}}
           {{/each}}
           </ul>
           <ul class="u3_2">

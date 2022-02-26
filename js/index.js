@@ -35,47 +35,79 @@ oajax.onreadystatechange = function(){
 window.onload = function(){
     function outmove(){
     var lbt = document.querySelector('.lbt');
-    var timer=null,timer2=null;  //计时器id
-    var index =1;
+    var timer=null;
+    var timer2=null;
+    var index =0;
     timer = setInterval(function(){
         index++;
-        if(index>=3){
+        if(index>=4){
             index=0;
             lbt.scrollLeft = 0;
         }
         lb1();
-    },1000)
+    },2000)
 
 function lb1(){   //图片滚动函数
     var setp=0;             //起始步
     var maxsetp = 20;      //最大步
     var start = lbt.scrollLeft;          //开始位置
-    var end = 1001*index; //结束位置
+    var end = 1000*index; //结束位置
     var mi = (end-start)/ maxsetp;   //每步走多少
     timer2 = setInterval(function(){  
         setp++;   //步数开始增加
         if(setp>=maxsetp){   //当走到20 即最大步数 把当前图片宽度走完 一张图片结束
+            // setp=
             clearInterval(timer2);        //结束一个 清除当前计时器
         }
         start += mi;         //下一次的开始位置（每次增加一步的距离）
         lbt.scrollLeft=start; //滚动条滚动距离（同样的 每次滚动一步的距离）
-    },10)   //10和毫秒走一步
+    },20)   //10和毫秒走一步
+}
+
+shang.onmouseenter = function(){
+    clearInterval(timer)
+}
+shang.onclick = function(){
+    var str =lbt.scrollLeft
+    if(str<=3000){
+        index++;
+    lbt.scrollLeft+=1000;
+    }
+}
+shang.onmouseleave = function(){
+    outmove();
+}
+
+xia.onmouseenter = function(){
+
+    clearInterval(timer)
+}
+xia.onmouseleave = function(){
+    outmove()
+}
+xia.onclick = function(){
+    var str =lbt.scrollLeft
+    if(str>=0){
+    index--;
+    lbt.scrollLeft-=1000;
+    }
 }
     }
     outmove()
 
-// document.addEventListener('visibilitychange',function(){
-//     // 当其选项卡的内容变得可见或隐藏时，会在文档上触发visibilitychange(能见度更改)事件
-//     if(this.visibilityState=="hidden"){       //当隐藏（也就是切换页面了 就清除计时器）
-//     console.log(this.visibilityState);
 
-//     clearInterval(timer)
-//     clearInterval(timer2)
-//  };
-//     if(this.visibilityState=="visible"){    //当出现（也就是打开这个页面了 就从新调用轮播图函数）
-//     console.log(this.visibilityState);
+document.addEventListener('visibilitychange',function(){
+    // 当其选项卡的内容变得可见或隐藏时，会在文档上触发visibilitychange(能见度更改)事件
+    if(this.visibilityState=="hidden"){       //当隐藏（也就是切换页面了 就清除计时器）
+    console.log(this.visibilityState);
 
-//     outmove()
-// };
-// })
+    clearInterval(timer)
+    clearInterval(timer2)
+ };
+    if(this.visibilityState=="visible"){    //当出现（也就是打开这个页面了 就从新调用轮播图函数）
+    console.log(this.visibilityState);
+
+    outmove()
+};
+})
 }

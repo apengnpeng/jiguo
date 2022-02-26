@@ -98,7 +98,6 @@
 
 .mid .rig div, .mid .rigt div {
   width: 110px;
-  float: left;
   text-align: center;
   line-height: 120px;
   position: relative;
@@ -121,7 +120,6 @@
 
 .mid .xinh, .mid .shareh {
   width: 110px;
-  float: left;
   text-align: center;
   line-height: 120px;
   position: relative;
