@@ -90,9 +90,9 @@
         .xin {
             position: relative;
             width: 110px;
-            // float: left;
             text-align: center;
             line-height: 120px;
+            height: 120px;
             position: relative;
             p{
             height: 110px;
@@ -150,31 +150,5 @@
         left: 90px;
         display: none;
     }
-<<<<<<< HEAD
-    .xinh,.shareh{
-        width: 110px;
-        // float: left;
-        text-align: center;
-        line-height: 120px;
-        position: relative;
-        p{
-            color: gray;
-            position: absolute;
-            left: 35px;
-            top: 30px;
-        }
-    }
-    .shareh{
-        border-left: 2px solid #f7f7f7;
-    }
-
 }
-
-
-
-.bshare-custom,.xinh,.shareh{
-
-    display: none;
-=======
->>>>>>> a4274e98121786f710e9df38684b63e86fc45e64
 }

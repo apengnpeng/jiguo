@@ -14,12 +14,21 @@
   float: right;
   width: 400px;
   height: 200px;
-  animation: mov 1s;
+  -webkit-animation: mov 1s;
+          animation: mov 1s;
+}
+
+@-webkit-keyframes mov {
+  0% {
+    -webkit-transform: translate(100px, -100px);
+            transform: translate(100px, -100px);
+  }
 }
 
 @keyframes mov {
   0% {
-    transform: translate(100px, -100px);
+    -webkit-transform: translate(100px, -100px);
+            transform: translate(100px, -100px);
   }
 }
 
@@ -261,7 +270,8 @@
   bottom: 20px;
   border: 0px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .last li .p33 {

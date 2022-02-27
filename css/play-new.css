@@ -45,7 +45,8 @@
 
 .top .ull li img:hover,
 .top .ull2 li img:hover {
-  animation: opc 1s infinite;
+  -webkit-animation: opc 1s infinite;
+          animation: opc 1s infinite;
 }
 
 .top .ull li .p1,
@@ -96,7 +97,8 @@
 .top .ull3 .sh h2,
 .top .ull3 .hl h2 {
   margin: 0 auto;
-  transform: translateX(-450px);
+  -webkit-transform: translateX(-450px);
+          transform: translateX(-450px);
   width: 100px;
   height: 50px;
   line-height: 50px;

@@ -56,11 +56,13 @@
 
 .heard .right img {
   vertical-align: middle;
+  -webkit-transition: all .5s;
   transition: all .5s;
 }
 
 .heard .right img:hover {
-  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .heard .right button {
@@ -89,7 +91,6 @@
   padding-top: 40px;
   color: #a3a3a3;
   font-size: 14px;
-  position: relative;
   overflow: hidden;
 }
 

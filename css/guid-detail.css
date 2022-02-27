@@ -107,14 +107,8 @@
 .mid .rig .xin {
   position: relative;
   width: 110px;
-<<<<<<< HEAD
-  text-align: center;
-  line-height: 120px;
-  position: relative;
-=======
   height: 110px;
   float: left;
->>>>>>> a4274e98121786f710e9df38684b63e86fc45e64
 }
 
 .mid .rig .xin #x1 {
@@ -140,15 +134,9 @@
 .mid .rig .share {
   position: relative;
   width: 110px;
-<<<<<<< HEAD
-  text-align: center;
-  line-height: 120px;
-  position: relative;
-=======
   height: 110px;
   float: left;
   border-left: 2px solid #f7f7f7;
->>>>>>> a4274e98121786f710e9df38684b63e86fc45e64
 }
 
 .mid .rig .share #s1 {
