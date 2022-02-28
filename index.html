@@ -64,7 +64,7 @@
                </div>
            
             <h2 class="rm">热门试用</h2>
-            <a name='mao'></a>
+            <!-- <a name='mao'></a> -->
         <div class="lbt">
             <!-- 显示窗口 -->
             <div class="ck">
@@ -404,11 +404,35 @@
             </div>
 
         </div>
-        <div class="mao"><a href="#"><img src="./img/css-img/back.png" alt=""></a></div>
         <div class="last1">
             <p>©2016 极果版权所有</p>
         </div>
+
+
     </footer>
+    <div class="mao"><a href="#" ><img src="./img/css-img/back.png" alt=""></a></div>
+    <script>
+        var btn = document.getElementsByClassName('mao')[0];
+        btn.onclick =function(){
+        var ti=setInterval(function(){      //添加一个计时器
+            document.documentElement.scrollTop-=10;
+            if(document.documentElement.scrollTop==0){
+                clearInterval(ti);
+            }
+        },5)
+    }
+
+window.onscroll=function(){
+    if(document.documentElement.scrollTop>=100){
+        btn.style.display='block'
+    }else{
+        btn.style.display='none'
+    }
+    btn.style.top=(document.documentElement.scrollTop+500)+'px';
+    btn.style.right=(document.documentElement.scrollLeft+100)+'px';
+}
+
+    </script>
 </body>
 
 </html>

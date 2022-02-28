@@ -33,13 +33,14 @@ oajax.onreadystatechange = function(){
 
 // 轮播图
 window.onload = function(){
-    function outmove(){
     var lbt = document.querySelector('.lbt');
+    var index =0;
     var timer=null;
     var timer2=null;
-    var index =0;
+    function outmove(){
     timer = setInterval(function(){
         index++;
+        console.log(lbt.scrollLeft)
         if(index>=4){
             index=0;
             lbt.scrollLeft = 0;
@@ -63,37 +64,39 @@ function lb1(){   //图片滚动函数
         lbt.scrollLeft=start; //滚动条滚动距离（同样的 每次滚动一步的距离）
     },20)   //10和毫秒走一步
 }
-
-shang.onmouseenter = function(){
-    clearInterval(timer)
-}
-shang.onclick = function(){
-    var str =lbt.scrollLeft
-    if(str<=3000){
-        index++;
-    lbt.scrollLeft+=1000;
-    }
-}
-shang.onmouseleave = function(){
-    outmove();
-}
-
-xia.onmouseenter = function(){
-
-    clearInterval(timer)
-}
-xia.onmouseleave = function(){
-    outmove()
-}
-xia.onclick = function(){
-    var str =lbt.scrollLeft
-    if(str>=0){
-    index--;
-    lbt.scrollLeft-=1000;
-    }
-}
     }
     outmove()
+
+    shang.onmouseenter = function(){
+        clearInterval(timer)
+    }
+    shang.onclick = function(){
+        var str =lbt.scrollLeft
+        if(str<=4000){
+            index++;
+            console.log(index)
+        lbt.scrollLeft+=1000;
+        }
+    }
+    shang.onmouseleave = function(){
+        outmove();
+        console.log(index)
+    }
+    xia.onmouseenter = function(){
+        clearInterval(timer)
+    }
+    xia.onmouseleave = function(){
+        outmove()
+    }
+    xia.onclick = function(){
+        var str =lbt.scrollLeft
+        if(str>=0){
+        index--;
+        lbt.scrollLeft-=1000;
+        }
+    }
+
+
 
 
 document.addEventListener('visibilitychange',function(){
@@ -111,3 +114,7 @@ document.addEventListener('visibilitychange',function(){
 };
 })
 }
+
+
+
+
